@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <stdlib.h>
+//#include "function.h"
+
+typedef struct _Node {
+    int data;
+    struct _Node *next;
+} Node;
+
+void Create_List(Node** head, int val)
+{
+    Node *p = *head, *q = malloc(sizeof(Node));
+    q->data = val;
+    q->next = NULL;
+    if(p == NULL){
+        *head = q;
+    }
+    else{
+        while(p->next != NULL) p = p->next;
+        p->next = q;
+    }
+}
+
+Node* Add_List(Node* a, Node* b)
+{
+    if(a == NULL && b == NULL) return;
+    Node *head = malloc(sizeof(Node)), *p = head;
+    while(a != NULL || b != NULL){
+        if(a != NULL && b != NULL){
+            head->data = a->data + b->data;
+            a = a->next;
+            b = b->next;
+        }
+        else if(a == NULL){
+            head->data = b->data;
+            b = b->next;
+        }
+        else if(b == NULL){
+            head->data = a->data;
+            a = a->next;
+        }
+        if(a != NULL || b != NULL){
+            head->next = malloc(sizeof(Node));
+            head = head->next;
+        }
+        else head->next = NULL;
+    }
+    return p;
+}
+
+void Print_List(Node* a)
+{
+    if(a == NULL) return;
+    Node *q = a;
+    while(q->next != NULL){
+        printf("%d->", q->data);
+        q = q->next;
+    }
+    printf("%d\n", q->data);
+}
+
+void Free_List(Node* a)
+{
+    if(a == NULL) return;
+    if(a->next == NULL){
+        free(a);
+        return;
+    }
+    Node *prev;
+    while(a->next != NULL){
+        prev = a;
+        a = a->next;
+        free(prev);
+    }
+    free(a);
+}
+
+int main() {
+    Node *head_a = NULL, *head_b = NULL;
+    int data;
+
+    while(1) { // read List a
+        scanf("%d", &data);
+        if (data >= 0) {
+          Create_List(&head_a, data);
+        } else break;
+    }
+    while(1) { // read List b
+        scanf("%d", &data);
+        if (data >= 0) {
+          Create_List(&head_b, data);
+        } else break;
+    }
+
+    Node *head = Add_List(head_a, head_b);
+
+    Print_List(head_a);
+    Print_List(head_b);
+    Print_List(head);
+
+    Free_List(head_a);
+    Free_List(head_b);
+    Free_List(head);
+
+    return 0;
+}
+
+

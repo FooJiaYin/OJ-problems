@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct treeNode
+{
+    int data;
+    struct treeNode *left;
+    struct treeNode *right;
+} Node;
+
+Node* buildTree(int* inorder, int* preorder, int inorder_start, int inorder_end)
+{
+    Node *head = (Node *)malloc(sizeof(Node));
+    int left = 0;
+    while(*(inorder+inorder_start+left) != *preorder) left++;
+    
+    head->data = *preorder;
+    if(left != 0) head->left = buildTree(inorder, preorder+1, inorder_start, inorder_start+left-1);
+    else head->left = NULL;
+    if(inorder_end-inorder_start > left) head->right = buildTree(inorder, preorder+1+left, inorder_start+left+1, inorder_end);
+    else head->right = NULL;
+    
+    return head;
+}
+
+void showPostorder(Node* root)
+{
+    if(root->left != NULL)showPostorder(root->left);
+    if(root->right != NULL)showPostorder(root->right);
+    printf("%d ", root->data);
+}

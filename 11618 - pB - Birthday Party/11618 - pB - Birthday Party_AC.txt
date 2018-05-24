@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+unsigned long long GCD(unsigned long long a, unsigned long long b)
+{
+    if (b==0) return a;
+    else return GCD(b, a%b);
+}
+
+unsigned long long LCM(unsigned long long a, unsigned long long b)
+{
+    return (a/GCD(a, b))*b;
+}
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+
+    while(T--)
+    {
+        unsigned long long n, x1, x2, x3, ans;
+        scanf("%llu %llu %llu %llu", &n, &x1, &x2, &x3);
+
+        x1 = GCD(x1, n);
+        x2 = GCD(x2, n);
+        x3 = GCD(x3, n);
+
+        ans = n/LCM(LCM(x1, x2), x3);
+
+        printf("%llu\n", ans);
+    }
+
+    return 0;
+}

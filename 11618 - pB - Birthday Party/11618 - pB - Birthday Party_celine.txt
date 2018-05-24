@@ -1,0 +1,33 @@
+#include<stdio.h>
+unsigned long long GCD(unsigned long long n,unsigned long long x1);
+unsigned long long LCM(unsigned long long f1,unsigned long long f2);
+
+int main(){
+    int i,t;
+    unsigned long long n,red,blue,yellow,multiple,ans;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+        {
+            scanf("%llu %llu %llu %llu",&n,&red,&blue,&yellow);
+            multiple=LCM(LCM(GCD(n,red),GCD(n,blue)),GCD(n,yellow));
+            ans=(n/multiple);
+            printf("%llu\n",ans);
+        }
+    return 0;
+}
+
+unsigned long long GCD(unsigned long long n,unsigned long long x)
+{
+    unsigned long long i,ans;
+    for(i=x;i>0&&((n%i)>0||(x%i)>0);i--);
+        if((n%i)==0&&(x%i)==0)ans=i;
+    return ans;
+}
+unsigned long long LCM(unsigned long long f1,unsigned long long f2)
+{
+    unsigned long long max,i;
+    if(f1>f2)max=f1;
+    else max=f2;
+    for(i=max;((i%f1)>0||i%f2>0);i++);
+    return i;
+}

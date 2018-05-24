@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1520357306 source:c:\users\yin\desktop\11335 - josephus problem using doubly circular linked list\11335.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1520101285 c:\users\yin\desktop\11335 - josephus problem using doubly circular linked list\function.h
+
+1520359847 source:c:\users\yin\desktop\11335 - josephus problem using doubly circular linked list\11335 - josephus problem using doubly circular linked list.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1520357306 source:d:\users\yin\nthu\course & assignments\c programming\problems\11335 - josephus problem using doubly circular linked list\11335.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1520101285 d:\users\yin\nthu\course & assignments\c programming\problems\11335 - josephus problem using doubly circular linked list\function.h
+
+1520577240 source:d:\users\yin\nthu\course & assignments\c programming\problems\11335 - josephus problem using doubly circular linked list\11335 - josephus problem using doubly circular linked list.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

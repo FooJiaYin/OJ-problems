@@ -1,0 +1,42 @@
+#include<stdio.h>
+int num[200010]={0}, request[100010]={0};
+
+int main(void)
+{
+    int n, m, M, e, i;
+
+    scanf("%d %d", &n, &m);
+    M=0;
+    while(M<m)
+    {
+        scanf("%d", &e);
+        if(num[e]==0)
+        {
+            num[e]=1; //record the numbers to be skipped later
+        }
+        else
+        {
+            for(i=0; request[i]!=e; ++i); //find previous e
+            while(i<M)
+            {
+                request[i] = request[i+1]; //shift all up to replace the e
+                i++;
+            }
+            m--, M--;
+        }
+        request[M]=e;
+        M++;
+    }
+
+    /* Print requested numbers */
+    for(i=m-1; i>=0; i--)
+        printf("%d\n", request[i]);
+
+    /* Print the else numbers */
+    for(i=1; i<=n; i++)
+    {
+        if(num[i]!=1) printf("%d\n", i); //skip requested numbers
+    }
+
+    return 0;
+}

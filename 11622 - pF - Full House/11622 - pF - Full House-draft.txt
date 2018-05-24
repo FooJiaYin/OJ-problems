@@ -1,0 +1,20 @@
+A=0
+B=0
+
+if (card2==card1)
+A++
+
+else B++
+
+if (card==card1) A++
+if (card==card2) B++
+
+if (A==2&&B==3||A==3&&B==2)
+
+Problem
+- (Solved) Errors occur when card1==card2, cannot set new card as B
+- (Solved) CANNOT scan "10" as %c!!! ==> use getchar()
+
+(TA)
+## Method 1: array card[5] (store the occurance of each card)
+## Method 2: sort the cards

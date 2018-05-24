@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1509282343 source:c:\users\yin\desktop\11260 - find palindrom\11260 - find palindrom.c
+	<stdio.h>
+	<string.h>
+

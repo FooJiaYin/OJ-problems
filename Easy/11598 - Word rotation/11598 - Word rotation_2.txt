@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    int L, i;
+    char temp;
+    char input[1001]={0};
+
+    scanf("%s",input);
+    L=strlen(input);
+
+    while(L>0){
+        temp=input[0];
+        for(i=0;i<strlen(input)-1;i++)
+            input[i]=input[i+1];
+        input[strlen(input)-1]=temp;
+        L--;
+        printf("%s\n",input);
+    }
+
+    return 0;
+}

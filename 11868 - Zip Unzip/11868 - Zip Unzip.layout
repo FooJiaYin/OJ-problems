@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="11868 - Zip Unzip.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="768" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="function.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1162" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="11868.c" open="1" top="0" tabpos="1" split="2" active="1" splitpos="665" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2529" topLine="63" />
+			<Cursor2 position="4407" topLine="54" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

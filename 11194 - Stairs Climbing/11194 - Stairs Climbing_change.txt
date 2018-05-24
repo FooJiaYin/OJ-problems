@@ -1,0 +1,31 @@
+#include<stdio.h>
+int count=0;
+
+int change(int amount)
+{
+    int step;
+    if(amount<-1) return;
+    if(amount==0) count++;
+    else
+    {
+        step=1;
+        change(amount-step);
+        step=2;
+        change(amount-step);
+    }
+    return count;
+}
+
+int main(void)
+{
+    int N;
+    scanf("%d", &N);
+    while(N--)
+    {
+        int input;
+        count = 0;
+        scanf("%d", &input);
+        printf("%d\n", change(input));
+    }
+    return 0;
+}

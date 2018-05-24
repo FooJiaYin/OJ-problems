@@ -1,0 +1,70 @@
+#include<stdio.h>>
+
+int main(void)
+{
+
+    /*
+    int a[7]={0}, b[7]={0}, x[7]={0}, y[7]={0};
+    int i, j, i_2, j_2, n;
+    double sum;
+
+    scanf("%1d%1d%1d%1d%1d%1d%c%1d%1d%1d%1d%1d", &a[1], &a[2], &a[3], &a[4], &a[5], &a[6], &b[1], &b[2], &b[3], &b[4], &b[5]);
+    printf("%d %d %d %d %d %d\n", a[1], a[2], a[3], a[4], a[5], a[6]);
+    printf("%d %d %d %d %d %d\n", b[1], b[2], b[3], b[4], b[5], b[6]);
+    */
+
+    /*
+    char input[7]={0};
+    int a[7]={0}, b[7]={0}, x[7]={0}, y[7]={0};
+    int i, j, i_2, j_2, n;
+    double sum;
+
+    scanf("%c%c%c%c%c%c%c", &input[1], &input[2], &input[3], &input[4], &input[5], &input[6], &input[7]);
+    sscanf(input,"%1d%1d%1d%1d%1d%1d", &a[1], &a[2], &a[3], &a[4], &a[5], &a[6]);
+    printf("%d %d %d %d %d %d\n", a[1], a[2], a[3], a[4], a[5], a[6]);
+    */
+
+    /*
+    int a[7]={0}, b[7]={0}, x[7]={0}, y[7]={0};
+    int i, j, i_2, j_2, n;
+
+    double sum;
+
+    for(i=1;a[i]!='.' && i<7 ;i++)
+        scanf("%d", &a[i]);
+    scanf("%1d", &b[i]);
+    printf("%d %d %d %d %d %d\n", a[1], a[2], a[3], a[4], a[5], a[6]);
+    printf("%d %d %d %d %d %d\n", b[1], b[2], b[3], b[4], b[5], b[6]);
+    */
+
+
+    /*
+    double input, D, E, F, sum;
+    int a, b, c, d, e, f;
+
+    scanf("%lf", &input);
+
+    a = input / 100, input-=(a*100);
+
+    printf("%f\n",input);
+    b = input / 10, input-=(b*10);
+    c = input, input-=c;
+    printf("%f\n",input);
+    d = input*10;
+    //printf("%f %d %f %f\n",input, d, D, D/10);
+    e = (input*100)-d; printf("%d %d",d, 12e);
+    f = input*1000, F = f;
+    printf("%f %d %d %d %lf %lf %lf\n",input, a, b, c, d, e, F);
+
+    sum = c*100 + b*10 + a + F/10 + E/100 + D/1000 + input;
+
+    printf("%.3lf", sum);
+
+    printf("%d", a);
+
+    */
+
+
+    return 0;
+}
+

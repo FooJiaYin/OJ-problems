@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_image.h>
+
+/*
+    TODO: Include the head files containing the fuctions we want to use
+*/
+
+ALLEGRO_DISPLAY* display = NULL;
+
+/*
+    TODO: Declare the variable of font and image.
+*/
+ALLEGRO_COLOR bg_color, rectangle_color, text_color;
+ALLEGRO_FONT *title_font, *body_font;
+ALLEGRO_BITMAP *htchen_img = NULL;
+
+
+const int width = 800;
+const int height = 600;
+
+const int img_width = 640;
+const int img_height = 480;
+
+void show_err_msg(int msg);
+void game_init();
+void game_begin();
+void game_destroy();
+
+
+int main(int argc, char *argv[]) {
+    int msg = 0;
+
+    game_init();
+    game_begin();
+    printf("Hello world!!!\n");
+    al_rest(10);
+
+    game_destroy();
+    return 0;
+}
+
+
+void show_err_msg(int msg) {
+    fprintf(stderr, "unexpected msg: %d", msg);
+    game_destroy();
+    exit(9);
+}
+
+void game_init() {
+    if (!al_init()) {
+        show_err_msg(-1);
+    }
+
+    display = al_create_display(width, height);
+    if (display == NULL) {
+        show_err_msg(-1);
+    }
+
+    al_init_primitives_addon();
+    /*
+        TODO: Initialize the image and the font.
+    */
+    al_init_font_addon();
+    al_init_ttf_addon();
+    al_init_image_addon();
+}
+
+void game_begin() {
+    /*
+        TODO: Load and draw all!!!
+    */
+
+    bg_color = al_map_rgb(100,100,100);
+    rectangle_color = al_map_rgb(78,203,244);
+    text_color = al_map_rgb(255,255,255);
+    title_font = al_load_ttf_font("pirulen.ttf", 80, 0);
+    body_font = al_load_ttf_font("pirulen.ttf", 15, 0);
+    htchen_img = al_load_bitmap("htchen.jpg");
+
+    int rectangle_padding = 10;
+
+    al_clear_to_color(bg_color);
+    al_draw_filled_rectangle((width-400)/2,0,(width-400)/2+400,110,text_color);
+    al_draw_filled_rounded_rectangle((width-400)/2+rectangle_padding,rectangle_padding,(width-400)/2+400-rectangle_padding,110-rectangle_padding,8,8,rectangle_color);
+    al_draw_text(title_font, text_color,400,0,ALLEGRO_ALIGN_CENTER,"WHY");
+
+    al_draw_scaled_bitmap(htchen_img,0,0,640,410,(width-400)/2,110,400,256,0);
+
+    al_draw_filled_rectangle((width-400)/2,366,(width-400)/2+400,500,text_color);
+    al_draw_filled_rounded_rectangle((width-400)/2+rectangle_padding,366+rectangle_padding,(width-400)/2+400-rectangle_padding,500-rectangle_padding,8,8,rectangle_color);
+
+    al_draw_text(body_font, text_color,400,400,ALLEGRO_ALIGN_CENTER,"Why?");
+    al_draw_text(body_font, text_color,400,420,ALLEGRO_ALIGN_CENTER,"Why am I the smartest");
+    al_draw_text(body_font, text_color,400,438,ALLEGRO_ALIGN_CENTER,"professor in the NTHU?");
+
+    al_flip_display();
+}
+void game_destroy() {
+    al_destroy_display(display);
+}

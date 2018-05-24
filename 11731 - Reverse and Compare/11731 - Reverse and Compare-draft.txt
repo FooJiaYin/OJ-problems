@@ -1,0 +1,30 @@
+Original:
+aabbc
+=1
+
+Exchange of b and a:
+baabc
+babac
+ababc
+abbac
+=no of a*no of b 
+=2*2
+
+Exchange of a and c:
+cabba
+acbba
+=no of a*no of c 
+=2*1
+
+Exchange of b and c:
+aacbb
+aabcb
+=no of b*no of c
+=2*1
+
+Total
+=1+2*2+2*1+2*1
+=9
+
+
+

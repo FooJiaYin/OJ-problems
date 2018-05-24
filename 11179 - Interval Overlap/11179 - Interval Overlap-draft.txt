@@ -1,0 +1,19 @@
+i j i j
+j i j i
+i i j j
+j j i i
+i j j i
+j i i j
+
+a<c<b || c<b<d
+c<a<d || a<d<b
+a<c,d<b
+c<a,b<d
+
+right[i]>left[j]&&right[i]<right[j]
+c<b<d
+left[j]>left[i]&&left[j]<right[i]
+a<c<b
+
+left[i]>left[j]&&left[i]<right[j]
+c<a<d

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1518602960 source:c:\users\yin\desktop\11455 - lexicographic order\11455 - lexicographic order.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

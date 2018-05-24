@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+char testcase[1005];
+char left[505]; //the left parentheses that haven't had a right one to pair.
+int total;      //substract the number of right parentheses from the left's.
+
+int test(char nowParenth)
+{
+	if(nowParenth == '{' || nowParenth == '(' || nowParenth == '[' || nowParenth == '<') {
+		total++; //if the parenthes is the left one, add it to array left.
+		left[total] = nowParenth;	
+	}else if(total >= 0 && (nowParenth - left[total] <= 2 && nowParenth > left[total])) total--; //if it is pairs to the lastest left parenthes.
+	else return 0;
+	return 1;
+}
+
+int parenth(int len)
+{
+	int i;
+	if(len%2 == 1) return 0;  //if length is odd, it must not be an empty string. 
+	for(i=0; i<len; i++) if(!test(testcase[i])) return 0;
+	if(total != -1) return 0; //if the number of the right parentheses is different at the left's, it must not be an empty string.
+	return 1;
+}
+
+int main()
+{
+	int N, len, i, j;
+	char trash;
+	scanf("%d%c", &N, &trash);    //To deal with the newline character following by N.
+	
+	for(i=1; i<=N; i++) {
+		fgets(testcase, 1005, stdin);
+		len   = strlen(testcase)-1; //To deal with the newline character following by testcase.
+		total = -1;
+		printf("Case %d: ", i);
+		if(parenth(len)) printf("Yes\n");
+		else printf("No\n");
+	}
+
+	return 0;
+}

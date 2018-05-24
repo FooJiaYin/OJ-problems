@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1523371063 source:c:\users\yin\desktop\10966 - infix to syntax tree\10966.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"function.h"
+
+1523371064 c:\users\yin\desktop\10966 - infix to syntax tree\function.h
+
+1523472688 source:c:\users\yin\desktop\10966 - infix to syntax tree\10966 - infix to syntax tree.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

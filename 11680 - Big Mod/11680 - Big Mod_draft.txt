@@ -1,0 +1,8 @@
+(a^n)%p=(a^(n-1)%p*a)%p
+
+p=p/n if(p%n==0)
+p=(p-1)%M+1
+
+Loop if p/n/n/n/n...%n==0
+ans=0
+

@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i,j;
+    while(scanf("%d",&n)!=EOF)
+    {
+        int flag=1,a[1020]={0},b[1020]={0},end=0;
+        for(j=0;j<n;j++)
+            scanf("%d",&a[j]);
+        j=0;
+        b[end]=a[j];
+        for(i=1;i<=n&&flag==1;i++) {
+            if(b[end]==i) {
+                if(end>0) end--;
+            }
+            else if(end>=0) {
+                end++,j++;
+                for(;end<n;end++,j++) {
+                    b[end]=a[j];
+                    if(b[end]==i) {
+                        end--;
+                        break;
+                    }
+                }
+                if(end==n)flag=0;
+            }
+        }
+            if(flag==1)printf("YES\n");
+            else printf("NO\n");
+    }
+    return 0;
+}

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1522155685 source:c:\users\yin\desktop\11361 - binary tree operations\11361 - binary tree operations.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1522144563 c:\users\yin\desktop\11361 - binary tree operations\function.h
+	<stdlib.h>
+
+1522144533 source:c:\users\yin\desktop\11361 - binary tree operations\11361.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

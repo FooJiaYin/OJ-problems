@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1514986389 source:d:\users\yin\nthu\course & assignments\c programming\problems\11762 - e - reverse linked list\11762.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1514986388 d:\users\yin\nthu\course & assignments\c programming\problems\11762 - e - reverse linked list\function.h
+	<stdio.h>
+	<stdlib.h>
+
+1515048584 source:d:\users\yin\nthu\course & assignments\c programming\problems\11762 - e - reverse linked list\11762 - e - reverse linked list.c
+	<stdio.h>
+	<stdlib.h>
+

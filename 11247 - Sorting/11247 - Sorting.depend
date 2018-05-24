@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1506962427 source:c:\users\yin\desktop\11247 - sorting\11247 - sorting.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

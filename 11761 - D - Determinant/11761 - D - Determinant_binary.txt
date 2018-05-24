@@ -1,0 +1,41 @@
+#include <stdio.h>
+int size, max_N;
+int matrix[9][9]={0};
+long long record[270]={0};
+int flag[270]={0};
+
+long long det(int N, int layer, int k)
+{
+    if(!flag[N]) {
+        if(layer==size-1) return matrix[layer][k];
+
+        int a, n, i, p=1;
+        for(a=1, i=0, n=N; n>=0&&a<max_N; a*=2, n/=2, i++){
+            if(!(n%2)) {
+                record[N] += p*det(N+a, layer+1, i);
+                p = -p;
+            }
+        }
+        flag[N] = 1;
+    }
+    //printf("%ld [%d][%d][%d]\n", record[N], layer, k);
+    if(layer==-1) return record[N];
+    else return record[N]*matrix[layer][k];
+}
+
+int main(void)
+{
+    int i, j;
+    scanf("%d", &size);
+
+    for(i=0; i<size; i++){
+        for(j=0; j<size; j++){
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    int a;
+    for(a=1, i=0, max_N=0; i<size; max_N+=a, i++, a*=2);
+
+    printf("%lld\n", det(0, -1, 0));
+    return 0;
+}

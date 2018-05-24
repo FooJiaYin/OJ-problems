@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n, total;
+    scanf("%d", &n);
+    getchar();
+    for (int i=1; i<=n; i++)
+    {
+        total=-1;
+        char parenthes[10040]= {'\0'};
+        char leftp[10040]= {'\0'};
+        fgets(parenthes, sizeof(parenthes), stdin);
+        for (int j=0; j<strlen(parenthes); j++)
+        {
+            if  (parenthes[j]=='<' || parenthes[j]=='{' || parenthes[j]=='[' || parenthes[j]=='(')
+            {
+                total++;
+                leftp[total]=parenthes[j];
+            }
+            else if ((total>=0) && (parenthes[j]-leftp[total]<=2) && (parenthes[j]>leftp[total]))
+            {
+                total--;
+            }
+            else if (parenthes[j]=='\n' && total==-1)
+            {
+                printf("Case %d: Yes\n", i);
+                break;
+            }
+            else
+            {
+                printf("Case %d: No\n", i);
+                break;
+            }
+        }
+    }
+
+
+    return 0;
+}

@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_SIZE 500
+
+char content[MAX_SIZE] = {'\0'};
+char input[MAX_SIZE];
+char right[MAX_SIZE] = {'\0'};
+
+int main()
+{
+    int i_con=0, i_in=0, i_r=0, len;
+
+    fgets(input, MAX_SIZE, stdin);
+    len = strlen(input);
+
+    while(i_in < len){
+        if(input[i_in]=='/'){
+            i_in++;
+            if(input[i_in]=='n'){
+                content[i_con++] = '\n';
+                i_in += 7;
+            }
+            else if(input[i_in]=='b'){
+                if(i_con > 0) i_con--;
+                i_in += 9;
+            }
+            else if(input[i_in]=='r'){
+                if(i_r > 0)  content[i_con++] = right[--i_r];
+                i_in += 5;
+            }
+            else{
+                if(i_con > 0)   right[i_r++] = content[--i_con];
+                i_in += 4;
+            }
+        }
+        else content[i_con++] = input[i_in++];
+    }
+
+    while(i_r>0)
+        content[i_con++] = right[--i_r];
+    content[i_con] = '\0';
+
+    printf("%s", content);
+
+    return 0;
+}

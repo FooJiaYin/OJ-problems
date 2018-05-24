@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(void)
+{
+    long n,m,i=1,divisor;
+
+    for (n=2;i<=8;n++)
+    {
+        for (divisor=2; divisor<=n && n%divisor>0; divisor++);
+        if (n==divisor)
+        {
+            for (m=n+1; m%2==0 && m>2; m=m/2);
+
+            if (m==2)
+            {
+                printf("%ld\n",n);
+                i++;
+            }
+        }
+    }
+
+    return 0;
+}

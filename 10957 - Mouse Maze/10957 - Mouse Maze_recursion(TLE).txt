@@ -1,0 +1,45 @@
+#include<stdio.h>
+char map[500][500]={0};
+int row, column;
+unsigned steps, min_steps;
+
+void move(int x, int y)
+{
+    if(x<0 || x>=row || y<0 || y>=column) return;
+    if(min_steps==0 || steps<min_steps) {
+        if(map[x][y]=='F') min_steps = steps;
+        else if(map[x][y]=='S'||map[x][y]=='$') {
+            steps++;
+            map[x][y] = 'x';
+            move(x+1, y);
+            move(x-1, y);
+            move(x, y+1);
+            move(x, y-1);
+            steps--;
+            map[x][y] = '$';
+        }
+    }
+}
+
+int main(void)
+{
+    int N;
+    scanf("%d", &N);
+    while(N--){
+        scanf("%d %d ", &row, &column);
+        int start_x, start_y;
+        steps = 0; min_steps = 0;
+
+        for(int i=0; i<row; i++){
+            for(int j=0; j<column; j++){
+                scanf(" %c", &map[i][j]);
+                if(map[i][j]=='S') start_x = i, start_y = j;
+            }
+        }
+        move(start_x, start_y);
+        if(min_steps) printf("%u\n", min_steps);
+        else printf("-1\n");
+    }
+
+    return 0;
+}

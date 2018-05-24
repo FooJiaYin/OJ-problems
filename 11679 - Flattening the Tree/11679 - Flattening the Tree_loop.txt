@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(void)
+{
+    int n, i, j;
+    int flat[2000]={0};
+
+    scanf("%d", &n);
+    for(i=(n+1)/2; i>=1; i/=2)
+        for(j=1; i*j<=n; j++)
+            if(flat[i*j]==0) scanf("%d", &flat[i*j]);
+
+    for(i=1; i<n; i++)
+        printf("%d ", flat[i]);
+    printf("%d", flat[i]);
+
+    return 0;
+}

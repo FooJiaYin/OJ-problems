@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+    while(T--){
+        int i, j, n, edges_no, unknown[1000010]={0}, bipartite=1;
+        int pt1[1000010]={0}, pt2[1000010]={0}, color[1010]={0};
+
+        scanf("%d %ld", &n, &edges_no);
+
+        for(i=0; i<n; i++) color[i] = 0;
+        for(i=0; i<edges_no; i++)
+            scanf("%d %d", &pt1[i], &pt2[i]);
+
+        color[pt1[0]] = 1;
+        n = edges_no;
+
+        while(n>0 && bipartite){
+            for(i=0; i<edges_no && bipartite; i++) {
+                if(color[pt1[i]]||color[pt2[i]]&& !unknown[i]){
+                    if(color[pt1[i]]==color[pt2[i]]) bipartite = 0;
+                    else if(color[pt1[i]]) color[pt2[i]] = -color[pt1[i]];
+                    else if(color[pt2[i]]) color[pt1[i]] = -color[pt2[i]];
+                    unknown[i] = 1, n--;
+                }
+            }
+        }
+
+        if(bipartite) printf("Yes\n");
+        else printf("No\n");
+    }
+    return 0;
+}

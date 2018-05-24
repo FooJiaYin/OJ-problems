@@ -1,0 +1,72 @@
+#include <stdio.h> 
+#include <string.h> 
+char text[500], ans[500]; 
+
+void backspace(int *ptrNow, int *ptrLen){ 
+ if(*ptrNow>0){ 
+  int i; 
+   
+  for(i=*ptrNow; i<=*ptrLen-1; i++) ans[i-1] = ans[i]; 
+  
+  *ptrLen-=1; *ptrNow-=1; 
+ } 
+ else return; 
+} 
+
+void newline(int *ptrNow, int *ptrLen){ 
+ int i; 
+ for(i=*ptrLen-1; i>=*ptrNow; i--) ans[i+1] = ans[i]; 
+ ans[*ptrNow] = '\n'; 
+ *ptrLen+=1; 
+ *ptrNow+=1; 
+} 
+
+void right(int *ptrNow, int *ptrLen){ 
+ if(*ptrNow<*ptrLen) *ptrNow+=1; 
+} 
+
+void left(int *ptrNow, int *ptrLen){ 
+ if(*ptrNow>0) *ptrNow-=1; 
+} 
+
+int step(int start, int *ptrNow, int *ptrLen){ 
+ int i; 
+  
+ switch(text[start]){ 
+  case 'b': 
+   backspace(ptrNow, ptrLen); 
+   return start+8; 
+  case 'n': 
+   newline(ptrNow, ptrLen); 
+   return start+6; 
+  case 'r': 
+   right(ptrNow, ptrLen); 
+   return start+4; 
+  case 'l': 
+   left(ptrNow, ptrLen); 
+   return start+3; 
+ }  
+} 
+
+int main() 
+{ 
+ int i, j, tmp, len=0, now=0, n; 
+  
+ fgets(text, 500, stdin); 
+  
+ n = strlen(text); 
+  
+ for(i=0; i<n; i++){ 
+  if(text[i]=='/') i = step(i+1, &now, &len); 
+  else{ 
+   for(j=len; j>=now; j--)ans[j+1] = ans[j]; 
+   ans[now] = text[i]; 
+   len++; 
+   now++; 
+  } 
+ } 
+  
+ for(i=0; i<len; i++) printf("%c", ans[i]); 
+
+ return 0; 
+}

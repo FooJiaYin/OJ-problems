@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+    while(T--){
+        int n, bipartite=1;
+        long edges_no, i;
+        void **opposite[1010]={0};
+
+        scanf("%d %ld", &n, &edges_no);
+        while(edges_no--){
+            int pt1, pt2;
+            scanf("%d %d", &pt1, &pt2);
+
+            if(bipartite){
+                if(opposite[pt1]==NULL&&opposite[pt2]==NULL) {
+                    opposite[pt1] = &opposite[pt2];     //set pt1 and pt2 to the opposite to each other
+                    opposite[pt2] = &opposite[pt1];
+                }
+                else if(opposite[pt1]==NULL){
+                    opposite[pt1] = *opposite[pt2];
+                }
+                else if(opposite[pt2]==NULL){
+                    opposite[pt2] = *opposite[pt1];
+                }
+                else if(opposite[pt1]==opposite[pt2]){   //check if contradicts
+                    bipartite = 0;
+                }
+                else {
+                    void **temp1 = opposite[pt1];
+                    void **temp2 = *opposite[pt1];
+                    int i;
+                    for(i=0; i<=n; i++){
+                        if(opposite[i]==temp1){
+                            opposite[i] = *opposite[pt2];   //update all in group of pt1 to the opposite of pt2
+                        }
+                    }
+                    for(i=0; i<=n; i++){
+                        if(opposite[i]==temp2){           //update all in group of opposite of pt2 to pt1
+                            opposite[i] = *opposite[pt1];
+                        }
+                    }
+                }
+            }
+        }
+        if(bipartite) printf("Yes\n");
+        else printf("No\n");
+    }
+    return 0;
+}

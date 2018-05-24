@@ -1,0 +1,45 @@
+if(a[i][j]==selected)
+a[i][j] = 0;
+
+if(a[i][j]==selected1 || a[i][j]==selected2……345)
+a[i][j] = 0;
+
+if(a[i][0]+a[i][1]…a[i][5]==0)
+printf 
+break
+
+else if(a[0][i]+a[1][i]…a[5][i]==0)
+printf 
+break
+
+else if(a[0][0]+a[1][1]…==0)
+printf
+break
+
+*check the row and column of selected num only!
+*start checking from 5th scan
+*write a function?
+
+Problem
+
+- (Solved) Damaged bingo table for new test cases
+
+New method: 
+- row[5]={5,5,5,5,5}, column[5]={5,5,5,5,5}, 
+- row[i]--; column[j]-- for every crossing
+
+- (Solved) Maybe input the else numbers after enter new line. Numbers won't be scanned after bingo because of `break`.
+
+Solution:
+1. Do not use break
+2. Use flag to avoid printing the
+
+- (Solved) "\\" to print '\'
+- (Solved) if(j<5) very important!!
+
+(TA)
+Try using row={0}
+
+
+
+

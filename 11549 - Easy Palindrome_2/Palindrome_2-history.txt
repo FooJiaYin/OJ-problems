@@ -1,0 +1,66 @@
+#include<stdio.h>
+
+int main(void)
+{
+    int a, b, i, i_2, j, m, n, n_2;
+    double p[7]={0}, q[7]={0}, x[7]={0}, y[7]={0}, X, Y, SUM;
+    scanf("%d.%d",&a,&b);
+    //printf("%d %d\n",a,b);
+
+    /* Get the value for each digit */
+
+    p[6]=a/100000; a-=(p[6]*100000);
+    p[5]=a/10000; a-=(p[5]*10000);
+    p[4]=a/1000; a-=(p[4]*1000);
+    p[3]=a/100; a-=(p[3]*100);
+    p[2]=a/10; a-=(p[2]*10);
+    p[1]=a;
+    //printf("%f %f %f %f %f %f\n", p[1], p[2], p[3], p[4], p[5], p[6]);
+
+    q[6]=b/100000; b-=(q[6]*100000);
+    q[5]=b/10000; b-=(q[5]*10000);
+    q[4]=b/1000; b-=(q[4]*1000);
+    q[3]=b/100; b-=(q[3]*100);
+    q[2]=b/10; b-=(q[2]*10);
+    q[1]=b;
+
+    /* i is the number of digits before decimal point */
+    for(i=1; p[i]; i++);
+    i-=1;
+    //printf("%d\n", i);
+
+    /* m is i power of 10 */
+    for(m=1, j=1; j<i; j++)
+        m *= 10 ;
+
+    /* Clone the value of i and m */
+    i_2 = i;
+    n = n_2 = 10000/m;
+    //printf("%d %d\n", m, n);
+
+    /* Calculate the sum before decimal point */
+    for(j=1; j<=i_2; j++, i--)
+    {
+        x[j] = x[j-1] + (p[j]+p[i])*m;
+        m /= 10 ;
+        //printf("%d %d %d %lf %lf\n\n", i, j, m, p[j]+p[i], x[j]);
+    }
+    X = x[j-1];
+    //printf("%lf\n", X);
+
+    /* Calculate the sum after decimal point */
+    for(j=1,i=6-i_2; j<=6-i_2; j++, i--)
+    {
+        y[j] = y[j-1] + (q[j]+q[i])*n;
+        n /= 10 ;
+        //printf("%d %d %d %lf %lf\n\n", i, j, n, q[j]+q[i], y[j]);
+    }
+    Y = y[j-1];
+    //printf("%lf\n", Y);
+
+    /* Total */
+    SUM = X + Y/(n_2*10);
+    printf("%.*lf", 6-i_2, SUM);
+
+    return 0;
+}

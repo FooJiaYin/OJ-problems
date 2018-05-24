@@ -1,0 +1,132 @@
+// ConsoleApplication33.cpp: ??????????????
+//
+
+//#include "stdafx.h"
+#include <stdio.h>
+#include <stdlib.h>
+#define max_n 300000 + 5
+
+typedef enum { NUM, SUB, ADD, MUL } tokenSet;
+
+typedef struct Node
+{
+	long long int val;
+	int size;
+	tokenSet type;
+	struct Node *left, *right;
+}	Node;
+
+Node* prefixBuildTree();
+Node* makeNode(char);
+Node* deleteAndUpdate(Node *root, int index, int deleteHead, int deleteTail);
+long long int recalculate(Node*);
+
+void showTree(Node*);
+char choose(Node*);
+
+int main()
+{
+	int N;
+	int deletionHead, deletionTail;
+	Node* root = NULL;
+
+	scanf("%d", &N);
+	root = prefixBuildTree();
+	printf("%lld\n", (root->val) % 10007);
+	while (N--)
+	{
+		scanf("%d %d", &deletionHead, &deletionTail);
+		root = deleteAndUpdate(root, 1, deletionHead, deletionTail);
+		printf("%lld\n", (root->val) % 10007);
+	}
+//		system("pause");
+	return 0;
+}
+
+Node* prefixBuildTree()
+{
+	Node *root = NULL;
+	char c;
+
+	scanf(" %c", &c);
+	root = makeNode(c);
+	if (root->type != NUM)
+	{
+		root->left = prefixBuildTree();
+		root->right = prefixBuildTree();
+
+		root->size = root->left->size + root->right->size + 1;
+
+		if (c == '-') root->val = (root->left->val - root->right->val) % 10007;
+		else if (c == '+') root->val = (root->left->val + root->right->val) % 10007;
+		else if (c == '*') root->val = (root->left->val * root->right->val) % 10007;
+	}
+	else
+	{
+		root->size = 1;
+	}
+
+	return root;
+
+}
+
+Node* makeNode(char c)
+{
+	Node *res = (Node*)malloc(sizeof(Node));
+
+	if ('1' <= c && c <= '9') res->type = NUM;
+	else if (c == '-') res->type = SUB;
+	else if (c == '+') res->type = ADD;
+	else if (c == '*') res->type = MUL;
+
+	if (res->type == NUM) res->val = c - '0';
+	res->right = NULL;
+	res->left = NULL;
+
+	return res;
+}
+
+
+Node* deleteAndUpdate(Node *root, int index, int deleteHead, int deleteTail)
+{
+	// the tree contains nodes of index ~ index + size - 1
+	// the index of the root is "index"
+	if (root == NULL) return NULL;
+	if (index + root->size - 1 < deleteHead || deleteTail < index) return root;
+
+	int leftIndex = index + 1;
+	int rightIndex = (root->left) ? index + root->left->size + 1: index + 1;
+	root->left = deleteAndUpdate(root->left, leftIndex, deleteHead, deleteTail);
+	root->right = deleteAndUpdate(root->right, rightIndex, deleteHead, deleteTail);
+
+	//if the node is to be deleted
+	if (deleteHead <= index && index <= deleteTail)
+	{
+		root = (root->left == NULL) ? root->right : root->left;
+		return root;
+	}
+
+	// the node is on the path of deletion
+	int leftSize = (root->left) ? root->left->size : 0;
+	int rightSize = (root->right) ? root->right->size : 0;
+	root->size = leftSize + rightSize + 1;
+	root->val = recalculate(root) % 10007;
+
+	return root;
+}
+
+long long int recalculate(Node* root)
+{
+	if (root->type == SUB)
+		return root->left->val - root->right->val;
+	if (root->type == ADD)
+		return root->left->val + root->right->val;
+	if (root->type == MUL)
+		return root->left->val * root->right->val;
+	if (root->type == NUM)
+		return root->val;
+
+}
+
+
+

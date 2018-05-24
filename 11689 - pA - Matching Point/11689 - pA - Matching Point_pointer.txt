@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+int count;
+
+int calculate(char* s, char* t)
+{
+    int i, j;
+    for(i=0; i<strlen(s); i++)
+    {
+        //printf("length=%d\n", strlen(t));
+        if(s[i]==t[0])
+        {
+            if(strlen(t)==1) count++;
+            else calculate(s+i+1, t+1);
+            //printf("%d\n", count);
+        }
+    }
+    return count;
+}
+
+int main(void)
+{
+    int N=10;
+    while(N--)
+    {
+        char s[25]={0}, t[25]={0};
+        scanf("%s %s", &s, &t);
+        //printf("%s\n%s\n", s, t);
+        count = 0;
+        printf("%d\n", calculate(s,t));
+    }
+    return 0;
+}

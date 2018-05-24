@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1518680614 source:c:\users\yin\desktop\11480 - parentheses matching\11480 - parentheses matching.c
+	<stdio.h>
+	<string.h>
+

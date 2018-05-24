@@ -1,0 +1,6 @@
+if (a-b == c-b)
+
+else if ((float)a/b == (float)c/b)
+
+* (a*c==b*b) is better than (a/b==b/c)
+(Avoid using division)

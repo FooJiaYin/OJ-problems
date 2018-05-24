@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char sentence[110]={0};
+    while (fgets(sentence, 110, stdin)!=NULL)
+    {
+        char word[110][110]={0}, space;
+        int len=0, scan=1;
+        int i, j;
+
+        for(i=0; scan==1;  i++)
+        {
+            scan = sscanf(sentence+len, "%s", word[i]);
+            len += strlen(word[i]);
+            for(space=' '; space==' ' && len<strlen(sentence); len++) //count the spaces
+                sscanf(sentence+len, "%c", &space); //skip spaces and scan new word
+            len--;
+        }
+
+        for(i-=2; i>0; i--)
+            printf("%s ", word[i]);
+        printf("%s\n", word[0]);
+    }
+    return 0;
+}

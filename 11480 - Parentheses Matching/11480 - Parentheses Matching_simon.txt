@@ -1,0 +1,73 @@
+#include<stdio.h>
+
+char queue[1001];
+int pos;
+void move(){
+    for(int i = pos; i >= 0; i--){
+        queue[i+1] = queue[i];
+    }
+    pos++;
+}
+void unmove(){
+    for(int i = 0; i < pos; i++){
+        queue[i] = queue[i+1];
+    }
+    pos--;
+}
+
+int main(){
+    int T;
+    scanf("%d", &T);
+    while(getchar() != '\n');
+    int counter = 1;
+    while(T--){
+        queue[0] = 'e';
+        pos = 0;
+        int total = 0;
+        char c;
+        while(c = getchar()){
+            if(c == '\n') break;
+            switch(c){
+                case '{':
+                    move();
+                    queue[0] = '}';
+                    total++;
+                    break;
+                case '(':
+                    move();
+                    queue[0] = ')';
+                    total++;
+                    break;
+                case '[':
+                    move();
+                    queue[0] = ']';
+                    total++;
+                    break;
+                case '<':
+                    move();
+                    queue[0] = '>';
+                    total++;
+                    break;
+                case '}':
+                    total--;
+                    break;
+                case ')':
+                    total--;
+                    break;
+                case ']':
+                    total--;
+                    break;
+                case '>':
+                    total--;
+                    break;
+            }
+            if(queue[0] == c){
+                unmove();
+            }
+        }
+        if(queue[0] == 'e' && total == 0) printf("Case %d: Yes\n", counter);
+        else printf("Case %d: No\n", counter);
+        counter++;
+    }
+    return 0;
+}

@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+int connection[1010][1010]={0}, color[1010]={0};
+int n, bipartite=0;
+
+void initialize()
+{
+    int i, j;
+    for(i=1; i<=n; i++){
+        color[i] = 0;
+        for(j=1; j<=n; j++) {
+            connection[i][j] = 0;
+        }
+    }
+    bipartite = 0;
+}
+
+void coloring(int point, int now)
+{
+    if(bipartite||color[point]== -now) {
+        bipartite = 1;
+        return;
+    }
+    else if(color[point]==now)return;
+    else {
+        color[point] = now;
+
+        int i;
+        for(i=1; i<=n; i++){
+            if(connection[point][i]){
+                coloring(i, -now);
+            }
+        }
+    }
+}
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+    while(T--){
+        initialize();
+
+        int i, j, edges_no;
+        scanf("%d %ld", &n, &edges_no);
+
+        while(edges_no--){
+            int pt1, pt2;
+            scanf("%d %d", &pt1, &pt2);
+            connection[pt1][pt2]++;
+            connection[pt2][pt1]++;
+        }
+
+        coloring(1, 1);
+
+        if(bipartite==0) printf("Yes\n");
+        else printf("No\n");
+    }
+    return 0;
+}

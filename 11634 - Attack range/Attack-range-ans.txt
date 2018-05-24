@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    int Ax0, Ay0, Ax1, Ay1, Bx0, By0, Bx1, By1;
+    int inputcase;
+    scanf("%d",&inputcase);
+    while(inputcase--){
+        scanf("%d%d%d%d%d%d%d%d",&Ax0, &Ay0,&Ax1, &Ay1,&Bx0,&By0,&Bx1,&By1);
+        if(Ax1<=Bx0 || Ax0>=Bx1 || Ay1<=By0 || Ay0>=By1){
+            printf("Do you like WHAT YOU SEE,ASS WE CAN\n");
+        }else{
+            printf("BOY NEXT DOOR,DEEP DARK FANTASY\n");
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1511583477 source:c:\users\yin\desktop\11690 - pb - transpose\11690 - pb - transpose.c
+	<stdio.h>
+	"function.h"
+
+1511582049 c:\users\yin\desktop\11690 - pb - transpose\function.h
+	<stdio.h>
+	<stdlib.h>
+
+1511583337 source:c:\users\yin\desktop\11690 - pb - transpose\11690.c
+	<stdio.h>
+	<stdint.h>
+	"function.h"
+

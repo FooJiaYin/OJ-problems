@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(void)
+{
+    char input;
+    int list1[12]={0}, list2[12]={0};
+    int len1, len2;
+
+    /* Scan list1 */
+    int i = 0;
+    do {
+        scanf("%d", &list1[i++]);
+    } while(list1[i-1] > 0);
+    len1 = i-1;
+
+    /* Scan list2 */
+    i = 0;
+    do {
+        scanf("%d", &list2[i++]);
+    } while(list2[i-1] > 0);
+    len2 = i-1;
+
+    /* Print list1 */
+    for(i=0; i<len1-1; i++) {
+        printf("%d->", list1[i]);
+    }
+    printf("%d\n", list1[i]);
+
+    /* Print list2 */
+    for(i=0; i<len2-1; i++) {
+        printf("%d->", list2[i]);
+    }
+    printf("%d\n", list2[i]);
+
+    /* Print list Sum */
+    for(i=0; i<len2-1||i<len1-1; i++) {
+        printf("%d->", list1[i]+list2[i]);
+    }
+    printf("%d\n", list1[i]+list2[i]);
+
+    return 0;
+}

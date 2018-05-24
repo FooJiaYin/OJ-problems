@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<string.h>
+char letter[10020];
+int tell[10020];
+void backward(int str,int len);
+int match;
+#include<stdio.h>
+#include<string.h>
+char letter[10020];
+int tell[10020];
+void backward(int str,int len);
+int match;
+int main()
+{
+    int n,len,i,j;
+    scanf("%d",&n);
+    gets(letter);
+    for(j=1;j<=n;j++)
+    {
+        match=1;
+        gets(letter);
+        len=strlen(letter);
+        for(i=0;i<len;i++) tell[i]=0;
+
+        for(i=0;i<len&&match;i++) {
+            if((letter[i]=='}'||letter[i]==']'||letter[i]=='>'||letter[i]==')')&&tell[i]==0)
+                backward(i,len);
+        }
+        for(i=0;i<len&&match;i++) {
+            if((letter[i]=='{'||letter[i]=='['||letter[i]=='<'||letter[i]=='(')&&tell[i]==0)
+                match=0;
+        }
+        if(match)printf("Case %d: Yes\n",j);
+        else printf("Case %d: No\n",j);
+    }
+    return 0;
+}
+void backward(int str,int len)
+{
+    int i,j;
+    for(i=str;i<len;i++) {
+        if(letter[i]=='}') {
+            j=i-1;
+            while(tell[j]==1&&j>0)j--;
+            if(tell[j]==0&&letter[j]=='{') {
+                tell[j]=1;
+                tell[i]=1;
+            }
+            else match=0;
+        }
+        else if(letter[i]==']') {
+            j=i-1;
+            while(tell[j]==1&&j>0) j--;
+            if(tell[j]==0&&letter[j]=='[') {
+                tell[j]=1;
+                tell[i]=1;
+            }
+            else match=0;
+        }
+        else if(letter[i]=='>') {
+            j=i-1;
+            while(tell[j]==1&&j>0)j--;
+            if(tell[j]==0&&letter[j]=='<') {
+                tell[j]=1;
+                tell[i]=1;
+            }
+            else match=0;
+        }
+        else if(letter[i]==')') {
+            j=i-1;
+            while(tell[j]==1&&j>0) j--;
+            if(tell[j]==0&&letter[j]=='(') {
+                tell[j]=1;
+                tell[i]=1;
+            }
+            else match=0;
+        }
+    }
+}

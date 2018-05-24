@@ -1,0 +1,9 @@
+if(((Ax0>Bx0 && Ax0<Bx1)||(Ax1>Bx0 && Ax1<Bx1))&&((Ay0>By0 && Ay0<By1)||(Ay1>By0 && Ay1<By1)))
+
+Problem: area of A maynot < area of B
+
+Method 2:
+if(Ax1-Bx0>=(Ax1-Ax0)+(Bx1-Bx0)||Bx1-Ax0>=(Ax1-Ax0)+(Bx1-Bx0)||Ay0-By1>=(Ay1-Ay0)+(By1-By0)||Ay1-By0>=(Ay1-Ay0)+(By1-By0))
+
+Simplify:
+if(Ax0>=Bx1 || Bx0>=Ax1 || Ay0>=By1 || By0>=Ay1)

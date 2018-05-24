@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1511637504 source:c:\users\yin\desktop\11224 - prefix\11224 - prefix.c
+	<stdio.h>
+	<ctype.h>
+
+1511863049 source:d:\users\yin\nthu\course & assignments\c programming\problems\11224 - prefix\11224 - prefix.c
+	<stdio.h>
+	<ctype.h>
+

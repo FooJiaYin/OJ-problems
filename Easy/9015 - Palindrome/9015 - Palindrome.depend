@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1509115516 source:c:\users\yin\desktop\9015 - palindrome\9015 - palindrome.c
+	<stdio.h>
+	<string.h>
+

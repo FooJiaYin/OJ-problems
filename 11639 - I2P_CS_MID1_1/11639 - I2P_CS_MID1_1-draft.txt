@@ -1,0 +1,5 @@
+Method 1:
+separate negative and positive grades
+
+Method 2:
+all grades +100000

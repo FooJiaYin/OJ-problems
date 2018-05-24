@@ -1,0 +1,35 @@
+#include<stdio.h>
+int sample[5][5]={0},tell[5][5]={0},input[25]={0};
+
+int main()
+{
+    int i,j,k,t,n,element,x,y;
+    for(i=0;i<5;i++)
+        for(j=0;j<5;j++)
+        scanf("%d",&sample[i][j]);
+    scanf("%d",&t);
+    for(y=1;y<=t;y++)
+    {
+        int tell[5][5]={0},input[25]={0},element=0;
+        scanf("%d",&n);
+        for(i=1,element=0;i<=n;i++)
+        {
+            scanf("%d",&input[i]);
+
+            for(j=0;j<5&&element!=5;j++)
+                for(k=0;k<5&&element!=5;k++)
+                        {
+                            if(input[i]==sample[j][k])tell[j][k]=1;
+                            for(x=0,element=0;tell[j][x]==1&&x<5;element++,x++);
+                            if(element!=5)for(x=0,element=0;tell[x][k]==1&&x<5;element++,x++);
+                            if(element!=5)for(element=0,x=0;j==k&&tell[x][x]==1&&x<5;element++,x++);
+                            if(element!=5)for(element=0,x=0;(j+k)==4&&tell[x][4-x]==1&&x<5;element++,x++);
+                            if(element==5)printf("Case #%d: %d\n",y,i);
+                        }
+        }
+
+        if(element!=5)
+        printf("Case #%d: Not yet \\(^o^)/\n",y);
+    }
+    return 0;
+}

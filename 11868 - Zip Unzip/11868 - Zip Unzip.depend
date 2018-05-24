@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1523449563 source:c:\users\yin\desktop\11868 - zip unzip\11868.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"function.h"
+
+1523354286 c:\users\yin\desktop\11868 - zip unzip\function.h
+
+1523453336 source:c:\users\yin\desktop\11868 - zip unzip\11868 - zip unzip.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"function.h"
+

@@ -1,0 +1,38 @@
+#include<stdio.h>
+#define STAND "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+#define SIT "----------------------------------------------------------------------------------------------------"
+
+void PrintWave(int n, int m, int t)
+{
+    int sitno1=0, standno=0, sitno2=0;
+
+    if (t >= m+n || t==0)
+        sitno1 = n;
+
+    else if (t <= m)
+        standno = t, sitno2 = n-t;
+
+    else if (t < n)
+        sitno1 = t-m, standno = m, sitno2 = n-t;
+
+    else
+        sitno1 = t-m, standno = m+n-t;
+
+    printf("%.*s%.*s%.*s\n", sitno1, SIT, standno, STAND, sitno2, SIT);
+}
+
+int main(void)
+{
+    int T, m[100]={0}, n[100]={0}, t[100]={0}, i;
+
+    scanf("%d", &T);
+
+    for(i=0; i<T; i++)
+        scanf("%d %d %d", &n[i], &m[i], &t[i]);
+
+    for(i=0; i<T; i++)
+        PrintWave(n[i], m[i], t[i]);
+
+    return 0;
+
+}

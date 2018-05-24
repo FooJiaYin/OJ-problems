@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1523462550 source:c:\users\yin\desktop\10968 - prefix to infix\10968.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1523462580 c:\users\yin\desktop\10968 - prefix to infix\function.h
+

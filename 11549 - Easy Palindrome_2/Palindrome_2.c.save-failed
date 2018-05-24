@@ -1,0 +1,78 @@
+#include<stdio.h>>
+
+int getsum(double digit[7], int num, int n, int i)
+{
+    /* Get the value for each digit */
+    digit[6]=num/100000; num-=(digit[6]*100000);
+    digit[5]=num/10000; num-=(digit[5]*10000);
+    digit[4]=num/1000; num-=(digit[4]*1000);
+    digit[3]=num/100; num-=(digit[3]*100);
+    digit[2]=num/10; num-=(digit[2]*10);
+    digit[1]=num;
+    //printf("%d %d %d %d %d %d\n", digit[1], digit[2], digit[3], digit[4], digit[5], digit[6]);
+
+    /* i is the number of digits */
+    for(i=1; digit[i]; i++);
+    i-=1;
+    printf("%d\n", i);
+
+    /* n is i power of 10 */
+    for(n=1; i>=1; i--)
+        n *= 10 ;
+    printf("%d\n", n);
+
+
+
+    return digit;
+}
+int main(void)
+{
+    int a, b, i, i_2, j, m, n, n_2, c;
+    double digit[7], p[7]={0}, q[7]={0}, x[7]={0}, y[7]={0}, X, Y, SUM;
+    scanf("%d.%d",&a,&b);
+    printf("%d %d\n",a,b);
+
+    c=a;
+
+    /* Get the value for each digit */
+    p[6]=a/100000; a-=(p[6]*100000);
+    p[5]=a/10000; a-=(p[5]*10000);
+    p[4]=a/1000; a-=(p[4]*1000);
+    p[3]=a/100; a-=(p[3]*100);
+    p[2]=a/10; a-=(p[2]*10);
+    p[1]=a;
+
+    printf("%d %d %d %d %d %d\n", p[1], p[2], p[3], p[4], p[5], p[6]);
+
+    /* Get the value for each digit */
+    digit[6]=c/100000; c-=(digit[6]*100000); printf("%d\n", digit[6]);
+    digit[5]=c/10000; c-=(digit[5]*10000); printf("%d\n", digit[5]);
+    digit[4]=c/1000; c-=(digit[4]*1000);
+    digit[3]=c/100; c-=(digit[3]*100);
+    digit[2]=c/10; c-=(digit[2]*10);
+    digit[1]=c;
+    printf("%d %d %d %d %d %d %d\n", a, digit[1], digit[2], digit[3], digit[4], digit[5], digit[6]);
+
+    /* i is the number of digits */
+    for(i=1; digit[i]; i++);
+    i-=1;
+    printf("%d\n", i);
+
+    /* n is i power of 10 */
+    for(j=1, n=1; j<=i; j++)
+        n *= 10 ;
+    printf("%d\n", n);
+
+    /* Calculate the sum before decimal point */
+    for(j=1; j<=i; j++)
+    {
+        x[j] = x[j-1] + (p[j]+p[i+1-j])*m;
+        m /= 10 ;
+        printf("%d %d %d %lf %lf\n\n", i, j, m, p[j]+p[i], x[j]);
+    }
+    X = x[j-1];
+    printf("%lf\n", X);
+
+    return 0;
+}
+

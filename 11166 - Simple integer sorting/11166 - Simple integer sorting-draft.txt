@@ -1,0 +1,11 @@
+Sorting
+
+Method 1: Insertion Sort
+
+Method 2: Bubble Sort
+Flag
+
+Method 3: qsort
+
+Problem:
+(Solved) compare is int. Cannot use return(*(long long *)a - *(long long *)b), overflow could occur

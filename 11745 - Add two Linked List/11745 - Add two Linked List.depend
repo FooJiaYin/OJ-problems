@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1514022946 source:c:\users\yin\desktop\11745 - add two linked list\11745 - add two linked list.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1514012078 source:c:\users\yin\desktop\11745 - add two linked list\11745.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1514014196 c:\users\yin\desktop\11745 - add two linked list\function.h
+	<stdio.h>
+	<stdlib.h>
+

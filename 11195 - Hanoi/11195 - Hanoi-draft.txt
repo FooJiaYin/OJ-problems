@@ -1,0 +1,128 @@
+# 3
+
+1 to C
+2 to B
+1 to B
+3 to C
+1 to A
+2 to C
+1 to C
+
+# 4
+1 to B
+2 to C
+1 to C
+3 to B
+1 to A
+2 to B
+1 to B
+4 to C
+1 to C
+2 to A
+1 to A
+3 to C
+1 to B
+2 to C
+1 to C
+
+# 5
+1 to C
+2 to B
+1 to B
+3 to C
+1 to A
+2 to C
+1 to C
+4 to B
+1 to B
+2 to A
+1 to A
+3 to B
+1 to C
+2 to B
+1 to B
+5 to C
+1 to A
+2 to C
+1 to C
+3 to A
+1 to B
+2 to A
+1 to A
+4 to C
+1 to C
+2 to B
+1 to B
+3 to C
+1 to A
+2 to C
+1 to C
+
+# 6
+1 to B
+2 to C
+1 to C
+3 to B
+1 to A
+2 to B
+1 to B
+4 to C
+1 to C
+2 to A
+1 to A
+3 to C
+1 to B
+2 to C
+1 to C
+5
+1
+2
+1
+3
+1
+2
+1
+4
+1
+2
+1
+3
+1
+2
+1
+6
+1
+2
+1
+3
+1
+2
+1
+4
+1
+2
+1
+3
+1
+2
+1
+5
+1
+2
+1
+3
+1
+2
+1
+4
+1
+2
+1
+3
+1
+2
+1
+
+
+
+

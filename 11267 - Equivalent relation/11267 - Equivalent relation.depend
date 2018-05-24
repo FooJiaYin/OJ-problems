@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1513444329 source:c:\users\yin\desktop\11267 - equivalent relation\main.c
+	<stdio.h>
+	"function.h"
+
+1513444334 c:\users\yin\desktop\11267 - equivalent relation\function.h
+
+1513526232 source:d:\users\yin\nthu\course & assignments\c programming\problems\11267 - equivalent relation\11267 - equivalent relation.c
+	<stdio.h>
+
+1513444329 source:d:\users\yin\nthu\course & assignments\c programming\problems\11267 - equivalent relation\main.c
+	<stdio.h>
+	"function.h"
+
+1513444334 d:\users\yin\nthu\course & assignments\c programming\problems\11267 - equivalent relation\function.h
+

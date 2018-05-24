@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1510164423 source:c:\users\yin\desktop\11656 - simple permutation\11656.c
+	<stdio.h>
+	<stdlib.h>
+	"code.c"
+
+1510165576 c:\users\yin\desktop\11656 - simple permutation\code.c
+	<stdio.h>
+	"function.h"
+
+1510164424 c:\users\yin\desktop\11656 - simple permutation\function.h
+	<stdio.h>
+	<stdlib.h>
+
+1510165576 source:c:\users\yin\desktop\11656 - simple permutation\code.c
+	<stdio.h>
+	"function.h"
+

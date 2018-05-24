@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <ctype.h>
+
+typedef struct chain{
+    char data;
+    struct chain *prev;
+    struct chain *next;
+}Node;
+
+Node* createNode(Node *now, char ch)
+{
+    Node *q = malloc(sizeof(Node));
+    q->data = ch;
+    if(now->next == NULL){
+        now->next = q;
+        q->next = NULL;
+        q->prev = now;
+    }
+    else{
+        q->next = now->next;
+        q->prev = now;
+        now->next = q;
+        q->next->prev = q;
+    }
+    return q;
+}
+
+Node* deleteNode(Node *now)
+{
+    if(now->next == NULL) return now;
+    Node *q = now->next;
+    if(now->next->next != NULL){
+        now->next = now->next->next;
+        now->next->prev = now;
+        free(q);
+    }
+    else{
+        free(q);
+        now->next = NULL;
+    }
+    return now;
+}
+
+void print(Node *head)
+{
+    if(head == NULL) return;
+    Node *p = head;
+    while(p->next != NULL){
+        printf("%c", p->data);
+        p = p->next;
+    }
+    printf("%c\n", p->data);
+}
+
+int main()
+{
+    Node *head = malloc(sizeof(Node)),  *now;
+    head->data = '0';
+    head->prev = NULL;
+    head->next = NULL;
+    now = head;
+    char ch = getchar();
+    while(ch != '\n'){
+        if(ch == EOF) break;
+        if(ch == '>'){
+            if(now->next != NULL) now = now->next;
+        }
+        else if(ch == '<'){
+            if(now != head) now = now->prev;
+        }
+        else if(ch == 'D') now = deleteNode(now);
+        else if(!isupper(ch)){
+            now = createNode(now, ch);
+        }
+        ch = getchar();
+    }
+    print(head->next);
+    return 0;
+}

@@ -1,0 +1,42 @@
+#
+
+##
+ #
+
+###
+  #
+ ##
+
+####
+   #
+ # #
+ ###
+
+#####
+    #
+ ## #
+ #  #
+ ####
+
+space[i][j]
+direction++
+if(direction%4==1,2,3,4) ==> direction = (direction+1)%4
+
+(N--) - steps
+(n=N; n>0; n--)
+
+## Ans
+- Concept of direction table
+
+	int direction[4][2]={{0,1},{1,0},{0,-1},{-1,0}};
+        while(Ne>0){
+            j=0;
+            while(j<Ne){
+				r=r+direction[idx][0];
+				c=c+direction[idx][1];
+				map[r][c]='#';
+				j++;
+			}
+            idx = (idx+1)%4;
+			Ne--;
+	    }

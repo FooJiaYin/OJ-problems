@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+
+char s[200020];
+
+int main(void)
+{
+    while(scanf("%s", &s)!=EOF)
+    {
+        long i,j,k, begin, end;
+        long lucky, count=0;
+
+        for(i=0; i<strlen(s); i++)
+
+        if(i<strlen(s))
+        {
+            for(i=0; i<strlen(s); i++)
+            for(j=1; j+i<=strlen(s); j++)
+            {
+                lucky = 0;
+                for(k=i; k-i<j; k++)
+                    if(s[k]=='9')
+                    {
+                        lucky = 1;
+                        break;
+                    }
+                if(lucky) count++;
+            }
+        }
+
+        printf("%ld\n", count);
+    }
+    return 0;
+}

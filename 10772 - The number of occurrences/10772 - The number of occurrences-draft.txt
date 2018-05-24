@@ -1,0 +1,11 @@
+Number of Occurance
+
+for(a[i]==5 && a[i+1]==0)
+	j++;
+
+Problems (Solved)
+line 17 - i<strlen(Bi)-1
+cannot out num of 4 in 4444 correctly
+
+Solution: 
+i<=strlen(Bi)-1

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1506574192 source:c:\users\yin\desktop\practice - nth prime\nth prime.c
+	<stdio.h>
+	<stdlib.h>
+
+1506576784 source:d:\users\yin\google drive\course & assignments\c programming\problems\practice - nth prime\nth prime.c
+	<stdio.h>
+	<stdlib.h>
+

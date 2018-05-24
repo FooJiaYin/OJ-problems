@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<string.h>
+#define MAX_SIZE 500
+char content[MAX_SIZE];
+char input[MAX_SIZE];
+
+ int main()
+ {
+     int i;
+     int cur=0;
+     char temp[MAX_SIZE]={0};
+     fgets(input,MAX_SIZE,stdin);
+
+
+     for(i=0;i<strlen(input);i++){
+        if(cur<0) cur=0;
+        if(cur>strlen(content)) cur=strlen(content);
+        if(input[i]=='/'){
+            switch(input[i+1]){
+            case 'b':
+            if(cur>0){
+            memset(temp, 0, MAX_SIZE);
+            strncpy(temp,content,cur-1);
+            strcat(temp,content+cur);
+            strcpy(content,temp);
+            cur--;
+            }
+            i+=9;
+            break;
+
+        case 'n':
+            memset(temp, 0, MAX_SIZE);
+            strncpy(temp,content,cur);
+            temp[cur]='\n';
+            strcat(temp,content+cur);
+            strcpy(content,temp);
+            i+=7;
+            cur++;
+            break;
+        case 'l':
+            cur--;
+            i+=4;
+            break;
+
+        case 'r':
+            cur++;
+            i+=5;
+            break;
+        }
+     }
+     else{
+            memset(temp, 0, MAX_SIZE);
+            strncpy(temp, content, cur);
+            temp[cur]=input[i];
+            strcat(temp,content+cur);
+            strcpy(content,temp);
+            cur++;
+
+     }
+
+     }
+     printf("%s",content);
+     return 0;
+ }

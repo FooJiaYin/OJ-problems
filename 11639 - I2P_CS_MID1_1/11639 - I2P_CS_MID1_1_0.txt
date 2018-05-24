@@ -1,0 +1,35 @@
+#include<stdio.h>
+long grade_positive[100020]={0}, grade_negative[100020]={0};
+
+int main(void)
+{
+    long n, i, largest_n=0, largest_p=0, sum=0;
+    scanf("%ld", &n);
+
+    while(n--)
+    {
+        long input;
+        scanf("%ld", &input);
+        if(input>=0 && grade_positive[input]==0)
+        {
+            if(input>largest_p) largest_p = input;
+            grade_positive[input]++;
+        }
+
+        if(input<0 && grade_negative[0-input]==0)
+        {
+            if(0-input>largest_n) largest_n = 0-input;
+            grade_negative[0-input]++;
+        }
+    }
+
+    for(i=0; i<=largest_p; i++)
+        sum+=grade_positive[i];
+    for(i=0; i<=largest_n; i++)
+        sum+=grade_negative[i];
+
+    printf("%ld\n", sum);
+
+    return 0;
+
+}

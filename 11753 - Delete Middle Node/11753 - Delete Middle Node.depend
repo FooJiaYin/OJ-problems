@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1514223262 source:c:\users\yin\desktop\11753 - delete middle node\11753 - delete middle node.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1514223299 c:\users\yin\desktop\11753 - delete middle node\function.h
+	<stdio.h>
+	<stdlib.h>
+

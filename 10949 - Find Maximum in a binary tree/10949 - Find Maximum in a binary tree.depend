@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1522133373 source:c:\users\yin\desktop\10949 - find maximum in a binary tree\10949.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1521360499 c:\users\yin\desktop\10949 - find maximum in a binary tree\function.h
+	<stdlib.h>
+
+1522133488 source:c:\users\yin\desktop\10949 - find maximum in a binary tree\10949 - find maximum in a binary tree.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

@@ -1,0 +1,15 @@
+a[0]~a[n-1]
+
+for(i=n-1; a[i]!=e; i--);
+while(i--)
+{
+a[i] = a[i-1];
+}
+a[0] = e;
+
+New method: 
+1. print the requested numbers inversely
+2. print the else numbers
+
+Problem:
+- (Solved) Numbers are requested repeatedly

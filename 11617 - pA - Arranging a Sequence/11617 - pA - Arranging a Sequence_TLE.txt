@@ -1,0 +1,29 @@
+#include<stdio.h>
+long sequence[300000]={0};
+
+int main(void)
+{
+    long n, m, i;
+
+    scanf("%ld %ld", &n, &m);
+
+    for(i=0; i<n; i++)
+        sequence[i]=i+1;
+
+    while(m--)
+    {
+        long input;
+        scanf("%ld", &input);
+
+        for(i=n-1; sequence[i]!=input; i--);
+        i++;
+        while(i--)
+            sequence[i] = sequence[i-1];
+        sequence[0] = input;
+    }
+
+    for(i=0; i<n; i++)
+        printf("%ld\n", sequence[i]);
+
+    return 0;
+}

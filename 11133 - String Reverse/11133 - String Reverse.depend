@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1507951807 source:c:\users\yin\desktop\11133 - string reverse\11133 - string reverse.c
+	<stdio.h>
+	<string.h>
+

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1510163904 source:c:\users\yin\desktop\11195 - hanoi\11195.cpp
+	<stdio.h>
+	<stdlib.h>
+	"11195 - Hanoi.c"
+
+1510164379 c:\users\yin\desktop\11195 - hanoi\11195 - hanoi.c
+	<stdio.h>
+	"function.h"
+
+1510156490 c:\users\yin\desktop\11195 - hanoi\function.h
+	<stdio.h>
+	<stdlib.h>
+
+1510164224 source:c:\users\yin\desktop\11195 - hanoi\11195 - hanoi.c
+	<stdio.h>
+	"function.h"
+

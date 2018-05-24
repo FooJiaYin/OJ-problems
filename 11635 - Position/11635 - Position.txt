@@ -1,0 +1,5 @@
+Method 1:
+scan each letter to identify ==>TLE
+
+Method 2: 
+for each alphabet, scan through the string to count ==> OKAY!

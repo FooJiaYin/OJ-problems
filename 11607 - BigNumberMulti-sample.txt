@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(void)
+{
+    int times;
+
+    scanf("%d", &times);
+
+    while(times--){
+
+        char a[2010], b[2010];
+        int reverse_a[2010]={0}, reverse_b[2010]={0}, c[4010]={0};
+        int length_a, length_b;
+        int i, j, k;
+
+        scanf("%s %s", a, b);
+
+        length_a = strlen(a);
+        //printf("%d\n",length_a);
+        for( i=0 ; i<length_a ; i++ ){
+            reverse_a[i] = a[length_a-1-i]-48;
+            //printf("%d",reverse_a[i]);
+        }
+        //printf("\n");
+
+        length_b = strlen(b);
+        //printf("%d\n",length_b);
+        for( i=0 ; i<length_b ; i++ ){
+            reverse_b[i] = b[length_b-1-i]-48;
+            //printf("%d",reverse_b[i]);
+        }
+        //printf("\n");
+
+        for( i=0 ; i<length_a ; i++ ){
+            for( j=0 ; j<length_b ; j++ ){
+                c[i+j] += reverse_a[i]*reverse_b[j];
+
+                if( c[i+j]>=10 ){
+                    c[i+j+1] += c[i+j]/10;
+                    c[i+j] %= 10;
+                }
+            }
+        }
+        for( i=length_a+length_b-1 ; i>=0 ; i-- ){
+            printf("%d", c[i]);
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}

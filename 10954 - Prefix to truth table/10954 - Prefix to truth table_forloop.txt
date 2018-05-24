@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+int now = 0;
+
+int operate(int A, int B, int C, int D, char exp[])
+{
+    now++;
+    if (now <= strlen(exp))
+    {
+        int op1, op2;
+        switch (exp[now-1]) {
+        case '|':
+            op1 = operate(A, B, C, D, exp);
+            op2 = operate(A, B, C, D, exp);
+            return op1 || op2; //cannot write `return operate(A, B, C, D, exp) || operate(A, B, C, D, exp);`
+        case '&':
+            op1 = operate(A, B, C, D, exp);
+            op2 = operate(A, B, C, D, exp);
+            return op1 && op2; //cannot write `return operate(A, B, C, D, exp) && operate(A, B, C, D, exp);`
+        case 'A': return A;
+        case 'B': return B;
+        case 'C': return C;
+        case 'D': return D;
+        }
+    }
+}
+
+int main(void)
+{
+    char exp[35] = {0};
+    scanf("%s", exp);
+    for (int A = 0; A <= 1; A++) {
+        for (int B = 0; B <= 1; B++) {
+            for (int C = 0; C <= 1; C++) {
+                for (int D = 0; D <= 1; D++) {
+                    now = 0;
+                    printf("%d %d %d %d %d\n", A, B, C, D, operate(A, B, C, D, exp));
+                }
+            }
+        }
+    }
+    return 0;
+}

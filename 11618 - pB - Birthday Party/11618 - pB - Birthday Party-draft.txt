@@ -1,0 +1,54 @@
+## Method 1: Array
+Problem: n too large
+
+a[3][n]
+
+Distribute balloon
+balloon=-1; ; balloon=(balloon+x[i])%n
+if a[i][balloon]==1 break
+else a[i][n]++
+
+How many pony get 3 balloon
+if(a[1][j]+a[2][j]+a[3][j]==3)
+i++
+
+## Method 2:GCD LCM
+
+Problem: TLE
+
+Sample Input
+2
+6 2 3 5
+10 2 3 7
+
+6
+1: 1 2 3 4 5
+2: 2 4 6
+3: 3 6
+5: 5 4 3 2 1
+6: 6
+
+10
+2: 2 4 6 8 10
+3: 3 6 9 2 5 8 1 4 7 10
+5: 5 10
+6: 6 2 8 4 10
+7: 7 4 1 8 5 2 9 6 3 10
+
+24
+2: 2 4 6 8 
+4: 4 8 12 16 20 24
+6: 6 12 18 24
+8: 8 16 24
+12: 12 24
+
+num~GCD
+N/LCM of num
+
+
+Sample Output
+1
+5
+
+Testcase 5: long long int
+a*b BOOM!!!!!

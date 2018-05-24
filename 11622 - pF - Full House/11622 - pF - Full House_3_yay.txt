@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+
+    while(T--)
+    {
+        int i, j, repeat=0;
+        char set[5][3];
+
+        for(i=0; i<5; i++)
+            scanf(" %s", set[i]);
+
+        for(i=0; i<5; i++)
+            for(j=0; j<5; j++)
+                if(set[i][0]==set[j][0]) repeat++;
+
+        if(repeat==13) printf("YES\n");
+        else printf("NO\n");
+    }
+
+    return 0;
+}

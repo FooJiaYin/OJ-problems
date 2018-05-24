@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1514399264 source:c:\users\yin\desktop\11737 - separating numbers and letters\11737 - separating numbers and letters.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+

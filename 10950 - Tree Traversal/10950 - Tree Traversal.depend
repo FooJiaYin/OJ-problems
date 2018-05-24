@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1522137414 source:c:\users\yin\desktop\10950 - tree traversal\10950 - tree traversal.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1522133920 c:\users\yin\desktop\10950 - tree traversal\function.h
+	<stdlib.h>
+
+1522133921 source:c:\users\yin\desktop\10950 - tree traversal\10950.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

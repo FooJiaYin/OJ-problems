@@ -1,0 +1,10 @@
+width of leaves (wol)
+= level*2 + 1
+
+if width > wol
+space
+= width - wol/2
+
+if width < wol
+space
+= width - wol/2

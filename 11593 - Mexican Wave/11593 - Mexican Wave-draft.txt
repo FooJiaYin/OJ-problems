@@ -1,0 +1,29 @@
+n=6
+m=3
+	t
+------	0
+^-----	1
+^^----	2
+^^^---	3
+-^^^-- 	4
+--^^^-	5
+---^^^	6
+----^^	7
+-----^	8
+------	9
+
+t=0	sitno1=0	standno=0	sitno2=n
+
+t=1-m	sitno1=0	standno=t	sitno2=n-t
+
+t=m-n	sitno1=t-m	standno=m	sitno2=n-t
+
+t=n-m+1	sitno1=t-m	standno=n-(t-m)	sitno2=0
+
+t>=m+n	sitno1=n	standno=0	sitno2=0
+
+General solution
+sitno1=t-m
+standno=n+m-t	standno=t 	standno=m
+(standno<n+m-t && standno=t && 	standno=m)
+sitno2=n-t

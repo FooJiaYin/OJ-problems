@@ -1,0 +1,49 @@
+#include<stdio.h>
+int space[2500][2500]={0};
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+    {
+        int N;
+        scanf("%d", &N);
+        int direction=0, steps=N+1;
+        int i, j, n;
+
+        /*Initialize space*/
+        for(i=0; i<N; i++)
+        {
+            for(j=0; j<N; j++)
+                space[i][j]=0;
+        }
+        
+        /* Walk */
+        i=0, j=-1;
+        while(steps--)
+        {
+            for(n=0; n<steps; n++)
+            {
+                if(direction%4==0) j++; //walk right
+                else if(direction%4==1) i++; //walk down
+                else if(direction%4==2) j--; //walk left
+                else i--; //walk up
+                space[i][j]=1;
+            }
+            direction++;
+        }
+
+        /* Print space */
+        for(i=0; i<N; i++)
+        {
+            for(j=0; j<N; j++)
+            {
+                if(space[i][j]) printf("#");
+                else printf(" ");
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}

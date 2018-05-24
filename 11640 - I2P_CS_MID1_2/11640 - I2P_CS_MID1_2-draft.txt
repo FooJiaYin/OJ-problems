@@ -1,0 +1,11 @@
+Problem:
+`break` in the `if` statement only break one level of loop
+
+Solution #1: loop condition
+Set get==0 in loop condition: `for(i=0; i<n && get==0; i++)`
+* it will still goes through `i++`
+* `stick[i-1]` at the end 
+
+Solution #2: Using break
+Add `if(get) break;` at the end of every loop;
+* Not going through `i++`

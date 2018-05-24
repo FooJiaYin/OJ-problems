@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1515072074 source:c:\users\yin\desktop\11759 - b - great depression again\11759 - b - great depression again.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

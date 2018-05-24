@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int finobacci(int n)
+{
+    if(n==1||n==0) return 1;
+    return finobacci(n-1)+finobacci(n-2);
+}
+
+int main(void)
+{
+    int N;
+    scanf("%d", &N);
+    while(N--)
+    {
+        int input;
+        scanf("%d", &input);
+        printf("%d\n", finobacci(input));
+    }
+    return 0;
+}

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1512666862 source:c:\users\yin\desktop\11701 - friend\11701 - friend.c
+	<stdio.h>
+	<stdbool.h>
+

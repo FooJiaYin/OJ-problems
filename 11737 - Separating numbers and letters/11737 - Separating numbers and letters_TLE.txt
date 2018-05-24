@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{
+    char test = getchar();
+    while(test != EOF) {
+        ungetc(test, stdin);
+        int total=0, num;
+        while(test != '\n') {
+            test = getchar();
+            if(isdigit(test)) {
+                ungetc(test, stdin);
+                scanf("%d", &num);
+                total += num;
+            }
+        }
+        printf("%d\n", total);
+        test = getchar();
+    }
+}

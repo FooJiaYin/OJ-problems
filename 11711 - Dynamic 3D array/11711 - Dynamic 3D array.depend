@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1514379835 source:c:\users\yin\desktop\11711 - dynamic 3d array\11711 - dynamic 3d array.c
+	<stdio.h>
+	<stdlib.h>
+
+1514374219 c:\users\yin\desktop\11711 - dynamic 3d array\function.h
+
+1514378510 source:c:\users\yin\desktop\11711 - dynamic 3d array\11711.c
+	<stdio.h>
+	"function.h"
+

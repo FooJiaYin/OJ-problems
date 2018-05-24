@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+char string[200050];
+
+long long c2(long long n)	//remember it's long long!
+{
+    if(n%2) return n * ((n-1)/2);
+    else return n/2 * (n-1);
+}
+
+int main(void)
+{
+    long long occurance[30]={0};
+    long long count=0;
+
+    scanf("%s", &string);
+    int len = strlen(string);
+
+    int i;
+    for(i=0; i<len; i++)
+        occurance[string[i]-'a']++;
+
+    count = c2(len)+1;
+
+    for(i=0; i<26; i++)
+    {
+        if(occurance[i]>1)
+            count -= c2(occurance[i]);
+    }
+
+    printf("%lld\n", count);
+
+    return 0;
+}

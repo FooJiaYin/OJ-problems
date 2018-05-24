@@ -1,0 +1,61 @@
+#include<stdio.h>
+void count(int smallest,int sum,int nv,int number[],int value[]);
+int ans;
+int main()
+{
+    int T;
+    scanf("%d",&T);
+    while(T--)
+    {
+        int number[2020]={0},value[22]={0},temp[22]={0};
+        int n,wanted,i,j,change,nv=0;
+        ans=0;
+        scanf("%d %d",&n,&wanted);
+        for(i=0;i<n;i++)
+        {
+            scanf("%d",&temp[i]);
+            number[temp[i]]++;
+        }
+        /*arrange the sequence*/
+        for(i=0;i<n-1;i++)
+            for(j=i+1;j<n;j++)
+        {
+            if(temp[j]<temp[i])
+            {
+                change=temp[i];
+                temp[i]=temp[j];
+                temp[j]=change;
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            if(temp[i]!=temp[i-1])
+            {
+                value[nv]=temp[i];
+                nv++;
+            }
+        }
+        count(0,wanted,nv,number,value);
+        printf("%d\n",ans);
+    }
+    return 0;
+}
+
+void count(int smallest,int amount,int nv,int number[],int value[])
+{
+    if(smallest<nv)
+    {
+        if(amount==0)
+                ans++;
+        else if(amount>0)
+        {
+            count(smallest+1,amount,nv,number,value);
+            if(number[value[smallest]]>0)
+            {
+                number[value[smallest]]--;
+                count(smallest,amount-value[smallest],nv,number,value);
+                number[value[smallest]]++;
+            }
+        }
+    }
+}

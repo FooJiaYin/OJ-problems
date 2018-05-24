@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1506566808 source:c:\users\yin\desktop\practice - kitty\kitty.c
+	<stdio.h>
+	<stdlib.h>
+

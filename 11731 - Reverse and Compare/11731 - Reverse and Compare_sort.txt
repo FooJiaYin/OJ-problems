@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char s[200050];
+int num[200050]={0};
+
+int main(void)
+{
+    int i, occurance, done=0;
+    long long count=0;
+
+    scanf("%s",s);
+
+    qsort(s,strlen(s),sizeof(char),(int (*)(const void*,const void*))strcmp);
+
+    for(i=0; i<strlen(s); i++)
+    {
+        if(s[i]!=s[i-1]) //skip the repeated
+        {
+            occurance = i-done;
+            done = i;
+            count += occurance*(strlen(s)-i);
+            j++;
+        }
+    }
+
+    printf("%lld\n",count+1);
+
+    return 0;
+}
+

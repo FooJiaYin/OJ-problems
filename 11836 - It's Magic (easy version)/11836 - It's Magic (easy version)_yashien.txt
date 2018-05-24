@@ -1,0 +1,111 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define max_n 100+5
+#define true 1
+#define false 0
+
+int spell(int leftMost, int rightMost, int grammars, int grammar[][max_n], int grammarSize[], int input[]);
+int compare(int leftMost, int rightMost, int grammars, int grammarNum, int grammar[][max_n], int grammarSize[], int input[]);
+
+int main()
+{
+	int grammars, sentences;
+	int grammar[max_n][max_n];
+	int input[max_n];
+	int grammarSize[max_n];
+	int inputSize;
+	int i, j;
+
+	scanf("%d %d", &grammars, &sentences);
+
+	for (i = 0; i < grammars; i++)
+	{
+		for (j = 0;; j++)
+		{
+			scanf("%d", &grammar[i][j]);
+			if (grammar[i][j] == -1)
+			{
+				grammarSize[i] = j;
+				break;
+			}
+		}
+	}
+
+	while (sentences--)
+	{
+		for (i = 0;; i++)
+		{
+			scanf("%d", &input[i]);
+			if (input[i] == -1)
+			{
+				inputSize = i;
+				break;
+			}
+		}
+
+		if (spell(0, inputSize-1, grammars, grammar, grammarSize, input) == 1) printf("True\n");
+		else printf("False\n");
+	}
+
+//	system("pause");
+	return 0;
+}
+
+int spell(int leftMost, int rightMost, int grammars, int grammar[][max_n], int grammarSize[], int input[])
+{
+	int grammarNum;
+
+	for (grammarNum = 0; grammarNum < grammars; grammarNum++)
+	{
+		if (grammarSize[grammarNum] == 1 && grammar[grammarNum][0] == 0) continue;
+		if (rightMost < leftMost && grammarSize[grammarNum] == 0) return true;
+		if (compare(leftMost, rightMost, grammars, grammarNum, grammar, grammarSize, input) == true)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+int compare(int leftMost, int rightMost, int grammars, int grammarNum, int grammar[][max_n], int grammarSize[], int input[])
+{
+	int leftIn, rightIn, grammarIn;
+	int compareRight = 0;
+
+	for (leftIn = leftMost, grammarIn = 0;; leftIn++, grammarIn++)
+	{
+		if (grammar[grammarNum][grammarIn] == 0)
+		{
+			compareRight = 1;
+			break;
+		}
+		else if (input[leftIn] != grammar[grammarNum][grammarIn])
+		{
+			return false;
+		}
+		else if (leftIn == rightMost && grammar[grammarNum][grammarIn + 1] == -1)
+		{
+			break;
+		}
+	}
+
+	if (compareRight == 1)
+	{
+		for (rightIn = rightMost, grammarIn = grammarSize[grammarNum] - 1;; rightIn--, grammarIn--)
+		{
+			if (grammar[grammarNum][grammarIn] == 0)
+			{
+				return spell(leftIn, rightIn, grammars, grammar, grammarSize, input);
+			}
+			else if (input[rightIn] != grammar[grammarNum][grammarIn])
+			{
+				return false;
+			}
+		}
+	}
+
+	return true;
+}

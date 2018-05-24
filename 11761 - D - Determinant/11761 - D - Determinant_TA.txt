@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+long long int determinant(int n, int matrix[8][8])
+{
+    if(n==1) return matrix[0][0];
+    else {
+        long long int ans=0;
+        int i, j, k, col;
+        int tmp[8][8];
+        for(i=0; i<n; i++){
+            for(j=1; j<n; j++){
+                col=0;
+                for(k=0; k<n; k++){
+                    if(k!=i) 
+                        tmp[j-1][col++] = matrix[j][k];
+                }
+            }
+            if(i%2==0) ans += matrix[0][i]*determinant(n-1, tmp);
+            else ans -= matrix[0][i]*determinant(n-1, tmp);
+        }
+        return ans;
+    }
+}
+
+int main()
+{
+    int n, i, j;
+    int matrix[8][8];
+    scanf("%d", &n);
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    printf("%lld\n", determinant(n,matrix));
+
+    return 0;
+}

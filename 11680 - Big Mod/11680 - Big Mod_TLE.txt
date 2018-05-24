@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main(void)
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+    {
+        long long mod2pw[50]={0};
+        long long a,n,p,i,mod;
+        scanf("%lld %lld %lld", &a, &n, &p);
+        if(n>100000)
+        {
+            int flag;
+            for(i=0, flag=0, mod=1; i<n; i++)
+            {
+                mod=(mod*a)%p;
+                if(mod==a%p&&flag==1) break;
+                else if(mod==a%p) flag=1;
+            }
+            n = (n-1)%i+1;
+        }
+        printf("i=%lld\n", i);
+        for(i=0, mod=1; i<n; i++)
+            mod=(mod*a)%p;
+        printf("%lld\n", mod);
+    }
+    return 0;
+}

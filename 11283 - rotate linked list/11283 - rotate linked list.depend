@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1523341244 source:d:\users\yin\nthu\course & assignments\c programming\problems\11283 - rotate linked list\11283.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1523341246 d:\users\yin\nthu\course & assignments\c programming\problems\11283 - rotate linked list\function.h
+
+1523370900 source:d:\users\yin\nthu\course & assignments\c programming\problems\11283 - rotate linked list\11283 - rotate linked list.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_image.h>
+
+/*
+    TODO: Include the head files containing the fuctions we want to use
+*/
+
+ALLEGRO_DISPLAY* display = NULL;
+
+/*
+    TODO: Declare the variable of font and image.
+*/
+ALLEGRO_COLOR bg_color, text_color;
+ALLEGRO_FONT *pirulen;
+ALLEGRO_BITMAP *htchen_img = NULL;
+
+
+const int game_width = 800;
+const int game_height = 600;
+
+const int img_width = 640;
+const int img_height = 480;
+
+void show_err_msg(int msg);
+void game_init();
+void game_begin();
+void game_destroy();
+
+
+int main(int argc, char *argv[]) {
+    int msg = 0;
+
+    game_init();
+    game_begin();
+    printf("Hello world!!!\n");
+    al_rest(10);
+
+    game_destroy();
+    return 0;
+}
+
+
+void show_err_msg(int msg) {
+    fprintf(stderr, "unexpected msg: %d", msg);
+    game_destroy();
+    exit(9);
+}
+
+void game_init() {
+    if (!al_init()) {
+        show_err_msg(-1);
+    }
+
+    display = al_create_display(game_width, game_height);
+    if (display == NULL) {
+        show_err_msg(-1);
+    }
+
+    al_init_primitives_addon();
+    /*
+        TODO: Initialize the image and the font.
+    */
+    al_init_font_addon();
+    al_init_ttf_addon();
+    al_init_image_addon();
+}
+
+void game_begin() {
+    /*
+        TODO: Load and draw all!!!
+    */
+
+    bg_color = al_map_rgb(255,158,188);
+    text_color = al_map_rgb(255,255,255);
+    pirulen = al_load_ttf_font("pirulen.ttf", 88, 0);
+    htchen_img = al_load_bitmap("htchen.jpg");
+
+    int width, title_padding, horizontal_padding;
+    int rectangle_height, rectangle_padding;
+    float img_scale;
+    width = 400;
+    horizontal_padding = (game_width-width)/2;
+    img_scale = width / img_width;
+    title_padding = 20;
+    rectangle_height = 160;
+    rectangle_padding = 10;
+
+    al_clear_to_color(bg_color);
+    al_draw_scaled_bitmap(htchen_img,0,0,img_width,img_height,0,160,width,img_height*img_scale,0);
+    al_draw_filled_rectangle(horizontal_padding,title_padding,width,160,text_color);
+    al_draw_filled_rounded_rectangle(horizontal_padding+rectangle_padding,title_padding+rectangle_padding,width-rectangle_padding,rectangle_height-rectangle_height,8,8,al_map_rgb(0,0,0));
+    al_draw_text(pirulen,text_color,horizontal_padding,0,ALLEGRO_ALIGN_LEFT, "Hello");
+    al_flip_display();
+}
+void game_destroy() {
+    al_destroy_display(display);
+}

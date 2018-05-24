@@ -1,0 +1,74 @@
+#include "function.h"
+#include <stdio.h>
+
+BTNode * EXPR()
+{
+	BTNode *root = NULL;
+	BTNode *right = NULL;
+	char c;
+
+	if (pos >= 0)
+	{
+		right = FACTOR();
+		if (pos >= 0)
+		{
+			c = expr[pos];
+			if (c == '\n') c = expr[pos--];
+
+			if (c == '|' || c == '&')
+			{
+				pos--;
+				root = makeNode(c);
+				root->right = right;
+				root->left = EXPR();
+			}
+			else
+				root = right;
+		}
+		else
+		{
+			root = right;
+		}
+	}
+
+	return root;
+}
+
+BTNode* FACTOR()
+{
+	char c;
+	BTNode *fac = NULL;
+
+	if (pos >= 0)
+	{
+		c = expr[pos--];
+		if (c == '\n') c = expr[pos--];
+
+		if (c == 'A' || c == 'B' || c == 'C' || c == 'D')
+		{
+			fac = makeNode(c);
+		}
+		else if (c == ')')
+		{
+			fac = EXPR();
+			pos--;
+		}
+	}
+	return fac;
+}
+
+BTNode* makeNode(char c)
+{
+	BTNode* res = (BTNode*)malloc(sizeof(BTNode));
+	int i;
+
+	for (i = 0; i < NUMSYM; i++)
+		if (c == sym[i])
+			break;
+
+	res->data = (TokenSet)i;
+	res->left = NULL;
+	res->right = NULL;
+
+	return res;
+}

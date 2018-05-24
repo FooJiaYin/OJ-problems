@@ -1,0 +1,16 @@
+double sum[100], count[100]; 
+int num=-1; 
+void calculateLevelAvg(Node* root) 
+{ 
+ num++; 
+ sum[num] += root->data; 
+ count[num]++; 
+ if (root->right!=NULL) calculateLevelAvg(root->right); 
+ if (root->left!=NULL) calculateLevelAvg(root->left); 
+ num--; 
+ if (num==-1){ 
+  int i,j; 
+  for (j=0;;j++) if (sum[j]==0) break; 
+  for (i=0; i<j; i++) printf("%.3f ",sum[i]/count[i]); 
+ } 
+}

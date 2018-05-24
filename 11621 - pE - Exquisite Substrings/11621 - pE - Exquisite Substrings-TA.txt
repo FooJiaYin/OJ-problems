@@ -1,0 +1,14 @@
+## Method 1:
+1. Find out all substring
+2. Determine if ispalindrome
+
+## Method 2;
+1. Find out Palindrome
+
+odd or even
+leftchar == rightchar
+
+n=1 ; n<strlen-1 ; n++
+i=0 ; n-i>=0 && n+i<strlen(string) ; ++i
+if(a[n-i]!=a[n+i]) break;
+

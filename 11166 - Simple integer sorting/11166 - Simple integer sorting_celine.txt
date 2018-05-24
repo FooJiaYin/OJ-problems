@@ -1,0 +1,29 @@
+#include<stdio.h>
+long long arr[10020];
+
+int main(){
+    int t,num,i,j;
+    long long temp;
+
+    scanf("%d",&t);
+    while(t--){
+    scanf("%d",&num);
+    for(i=0;i<num;i++)
+        scanf("%lld",&arr[i]);
+    for(i=0;i<num;i++)
+    {
+        for(j=i+1;j<num;j++)
+        if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+    }
+    for(i=0;i<num-1;i++)
+    printf("%lld ",arr[i]);
+    printf("%lld",arr[i]);
+    printf("\n");
+    }
+    return 0;
+}

@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+typedef struct _record {
+    char character;
+    struct _record *left;
+    struct _record *right;
+} Record;
+
+Record *cursor = NULL;
+Record *head = NULL;
+
+void del() {
+    Record *temp = cursor->right;
+    cursor->right = temp->right;
+    free(temp);
+}
+
+void shift_left() {
+    if(cursor->left != NULL) {
+        cursor = cursor->left;
+    }
+    else {
+        cursor = NULL;
+    }
+}
+void shift_right() {
+    if(cursor->right != NULL) {
+        cursor = cursor->right;
+    }
+}
+
+void type_new(Record** ptr, char input) {
+    Record *new_record = (Record*) malloc(sizeof(Record));
+    new_record->character = input;
+
+    if(*ptr == NULL) {
+        new_record->left = NULL;
+        new_record->right = head;
+        head = new_record;
+    }
+    else {
+        Record *temp = *ptr;
+        new_record->left = temp;
+        new_record->right = temp->right;
+        temp->right = new_record;
+        if (new_record->right != NULL) {
+            (new_record->right)->left = new_record;
+        }
+    }
+    cursor = new_record;
+    //print();
+}
+
+long long p(Record* ptr) {
+    if(ptr != NULL) return ptr;
+    else return 0;
+}
+
+void print() {
+    //printf("cursor:%x left:%x right:%x\n",p(*cursor), p((*cursor)->left), p((*cursor)->right));
+    if(cursor==NULL) printf("NULL\n");
+    else printf("cursor:%x head:%x\n", cursor, head);
+    printf("string: ");
+    Record *p = head;
+    while(p != NULL) {
+        printf("%c", p->character);
+        p = p->right;
+        //free(head->left);
+    }
+    printf("\n");
+}
+
+int main(void)
+{
+    char input=0;
+
+    while(1) {
+        scanf("%c", &input);
+        //print();
+        if(input == 'D') {
+            del();
+        }
+        else if(input == '<') {
+            shift_left();
+        }
+        else if(input == '>') {
+            shift_right();
+        }
+        else if(islower(input) || input=='_') {
+            type_new(&cursor, input);
+        }
+        else {
+            break;
+        }
+        //print();
+    }
+
+    while(head->right != NULL) {
+        printf("%c", head->character);
+        head = head->right;
+        free(head->left);
+    }
+    printf("%c\n", head->character);
+    free(head);
+
+    return 0;
+}

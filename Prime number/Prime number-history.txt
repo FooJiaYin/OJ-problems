@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main(void)
+
+{
+    int number, divisor, remainder, limit;
+    number = 1;
+    divisor = 2;
+    remainder = 1;
+    limit = 100;
+
+    printf("List of Prime Numbers (<%d):\n", limit);
+
+    for(number = 1; number <= limit; number++)
+    {
+        remainder = 1;
+        for(divisor = 2; divisor < number && remainder > 0; divisor++)
+            remainder = number % divisor;
+
+        if(remainder > 0)
+           printf("%d\n", number);
+    }
+
+    return 0;
+}

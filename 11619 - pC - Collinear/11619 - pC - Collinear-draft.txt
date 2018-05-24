@@ -1,0 +1,44 @@
+(y[i]-y[j])/(x[i]-x[j]) == (y[j]-y[k])/(x[j]-x[k]) 
+(y[i]-y[j])*(x[j]-x[k]) == (y[j]-y[k])*(x[i]-x[k])
+
+1 2 3-100
+2 3 4-100
+3 4 5-100
+
+pt (a,b), (c,d)
+(y-b)/(x-a)=(d-b)/(c-a)
+(c-a)y-(c-a)b = (d-b)x-(d-b)a
+y=(d-b)x/(c-a) - (d-b)a/(c-a) + b
+
+Problems:
+4 or more points on the same line
+
+Solution (TA)???
+number of line / num of points
+
+point[3] 	line+=point[i]
+point[4]	line+=point[i]
+
+if (collinear==2) point4++;
+if (collinear==1) point3++;
+
+collinear=3
+point[3]+=1
+
+collinear=4
+point[3]+=2	point[4]+=1
+
+collinear=5
+point[3]+=3	point[4]+=2	point[5]+=1
+
+collinear=6
+point[3]+=4	point[4]+=3	point[5]+=2	point[6]+=1
+...
+
+SUM
+point[3]=	...+4(6)+3(5)+2(4)+1(3)
+point[4]=	...+3(6)+2(5)+1(4)
+point[4]-[3]=	...+1(6)+1(5)+1(4)+1(3)	= no of lines
+
+
+ 

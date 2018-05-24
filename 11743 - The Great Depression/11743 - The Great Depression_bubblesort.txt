@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct _factory {
+	char name[22];
+	long profit;
+} Factory;
+
+Factory* factory[100020]={0};
+Factory* original[100020]={0};
+
+void sort(int n) {
+	long i, j;
+	for(i=0; i<n-1; i++) {
+        for(j=0; j<n-i-1; j++) {
+            long x = factory[j]->profit;
+            long y = factory[j+1]->profit;
+            if(x<y) {
+                Factory * temp = factory[j];
+                factory[j] = factory[j+1];
+                factory[j+1] = temp;
+            }
+        }
+	}
+}
+
+void sort2(int n) {
+	long i, j;
+	for(i=0; i<n-1; i++) {
+        for(j=0; j<n-i-1; j++) {
+            const char *x = factory[j]->name;
+            const char *y = factory[j+1]->name;
+            if(strcmp(x, y)==1) {
+                Factory * temp = factory[j];
+                factory[j] = factory[j+1];
+                factory[j+1] = temp;
+            }
+        }
+	}
+}
+
+int main(void) {
+	int n, x, y;
+	scanf("%d %d %d", &n, &x, &y);
+
+	int i;
+	long a, b;
+	for(i=0; i<n; i++) {
+		original[i] = (Factory *)malloc(sizeof(Factory));
+		scanf("%s %ld %ld", original[i]->name, &a, &b);
+		original[i]->profit = a-b;
+        factory[i] = original[i];
+	}
+	sort(n);
+	sort2(x);
+	for(i=0; i<x; i++) {
+		printf("%s\n", factory[i]->name);
+		free(factory[i]);
+	}
+	for(;i<n; i++) {
+        free(factory[i]);
+	}
+
+	return 0;
+}

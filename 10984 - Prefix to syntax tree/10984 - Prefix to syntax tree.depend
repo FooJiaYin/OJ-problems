@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1523338427 source:c:\users\yin\desktop\10984 - prefix to syntax tree\10984.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1523338467 c:\users\yin\desktop\10984 - prefix to syntax tree\function.h
+	<stdlib.h>
+
+1523348528 source:c:\users\yin\desktop\10984 - prefix to syntax tree\10984 - prefix to syntax tree.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+

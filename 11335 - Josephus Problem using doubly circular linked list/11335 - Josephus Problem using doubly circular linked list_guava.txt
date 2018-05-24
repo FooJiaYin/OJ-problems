@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct _Node{
+    int number;
+    struct _Node* next;
+    struct _Node* prev;
+}Node;
+
+Node* head;
+
+Node* createList(int n)
+{
+	int i;
+	head = (Node*)malloc(sizeof(Node));
+	Node *head2 = head;
+	
+	for(i=1; i<=n-1; i++) {
+		head2->number = i;
+		head2->next = (Node*)malloc(sizeof(Node));
+		head2->next->prev = head2;
+		head2 = head2->next;
+	}
+	head2->number = n;
+	head2->next = head;
+	head->prev = head2;
+	
+	return head2;
+} 
+
+int solveJosephus(int step)
+{
+	Node *head2;
+	while(1) {
+		int i;
+		for(i=0; i<step; i++) head = head->next;
+		head2 = head;
+		head = head->next;
+		head2->prev->next = head2->next;
+		head2->next->prev = head2->prev;
+		free(head2);
+		if(head->next == head) return head->number;
+		for(i=0; i<step; i++) head = head->prev;
+		head2 = head;
+		head = head->prev;
+		head2->prev->next = head2->next;
+		head2->next->prev = head2->prev;
+		free(head2);
+		if(head->next == head) return head->number;
+	}
+}
+
+void freeList()
+{
+	free(head);
+}

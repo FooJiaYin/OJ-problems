@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(void)
+{
+    char in[100001];
+    int i;
+
+    while(scanf("%s",&in)!=EOF)
+    {
+        int n=strlen(in);
+        int palindrome = 1;
+        for(i=0; i<n/2; i++)
+        {
+            if(in[i]!=in[n-1-i])
+            {
+                palindrome = 0;
+                break;
+            }
+        }
+        if(palindrome) printf("Yes\n");
+
+        else printf("No\n");
+
+    }
+}

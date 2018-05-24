@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1520078255 source:c:\users\yin\desktop\11832 - play cards\11832 - play cards.c
+	<stdio.h>
+	<stdlib.h>
+

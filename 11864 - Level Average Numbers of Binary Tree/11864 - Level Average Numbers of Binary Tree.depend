@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1523352751 source:c:\users\yin\desktop\11864 - level average numbers of binary tree\11864 - level average numbers of binary tree.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1523339925 c:\users\yin\desktop\11864 - level average numbers of binary tree\function.h
+	<stdlib.h>
+
+1523339924 source:c:\users\yin\desktop\11864 - level average numbers of binary tree\11864.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
