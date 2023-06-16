@@ -1,0 +1,41 @@
+10 30
+ucz
+ucz
+zuc
+ucz
+zuc
+ucz
+rip
+zuc
+ebc
+bce
+2 ebc
+2 zuc
+2 ucz
+2 zuc
+2 rip
+2 ucz
+2 zuc
+2 ucz
+2 ucz
+2 bce
+1 hwm
+2 hwm
+1 ivp
+2 ivp
+1 jmb
+1 sre
+1 mbj
+2 jmb
+2 sre
+2 mbj
+1 org
+2 org
+1 fhb
+2 fhb
+1 qbp
+2 qbp
+1 hsu
+2 hsu
+1 sym
+2 sym

@@ -1,0 +1,41 @@
+10 30
+hne
+hne
+fka
+hne
+rhi
+qyu
+wla
+rao
+ehn
+ede
+2 wla
+2 rhi
+1 ehn
+2 qyu
+2 rao
+1 jwe
+1 hne
+1 wjr
+2 ede
+2 hne
+2 wjr
+2 hne
+2 ehn
+2 hne
+1 ehn
+1 gzi
+2 jwe
+2 fka
+2 hne
+2 gzi
+1 neh
+2 ehn
+2 ehn
+1 orq
+1 rqo
+2 neh
+1 gqj
+1 kyp
+2 rqo
+2 orq

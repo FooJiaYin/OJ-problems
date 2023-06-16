@@ -1,0 +1,41 @@
+10 30
+gbf
+cas
+kmm
+vvh
+cas
+ecw
+mkm
+ljq
+joj
+jql
+1 hoa
+2 joj
+1 aho
+2 kmm
+2 vvh
+2 hoa
+1 lbd
+2 mkm
+2 jql
+2 aho
+1 amu
+2 ecw
+2 lbd
+2 amu
+1 tit
+2 gbf
+1 jql
+2 jql
+1 ohn
+2 cas
+2 tit
+2 ohn
+2 ljq
+1 orz
+2 orz
+1 asc
+1 lqj
+2 asc
+2 cas
+2 lqj

@@ -1,0 +1,41 @@
+10 30
+slp
+psl
+slp
+slp
+naf
+qlu
+lps
+oed
+afn
+anb
+1 psl
+2 afn
+2 psl
+2 psl
+2 anb
+2 lps
+2 oed
+2 naf
+1 qob
+2 qlu
+2 qob
+2 slp
+2 slp
+2 slp
+1 qno
+1 qno
+2 qno
+2 qno
+1 ehj
+2 ehj
+1 hku
+1 eyd
+2 eyd
+2 hku
+1 wqo
+2 wqo
+1 vqr
+1 qrv
+2 vqr
+2 qrv

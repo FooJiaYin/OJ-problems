@@ -1,0 +1,41 @@
+10 30
+noc
+qcm
+cnf
+fcn
+nfc
+mkt
+bpz
+kkl
+evy
+kkl
+1 urt
+1 fcn
+2 mkt
+1 zbp
+1 cno
+1 zbp
+1 htu
+2 urt
+1 fcn
+2 cnf
+2 cno
+1 bpz
+2 fcn
+2 nfc
+1 nfc
+2 bpz
+1 cnf
+2 kkl
+1 srb
+1 scc
+2 scc
+2 fcn
+1 bsr
+1 htu
+1 fcn
+2 cnf
+1 gwi
+1 qcm
+1 qth
+2 fcn

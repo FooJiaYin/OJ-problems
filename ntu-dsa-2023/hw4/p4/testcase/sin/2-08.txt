@@ -1,0 +1,41 @@
+10 30
+rkn
+knr
+nrk
+rkn
+fsi
+qow
+rkn
+bbv
+efw
+rkn
+1 knr
+2 qow
+1 bug
+2 fsi
+1 uil
+1 bbv
+1 rkn
+1 kzz
+1 arg
+2 arg
+1 bbv
+2 knr
+1 cgm
+1 knh
+1 rkn
+1 uil
+1 bmw
+1 jwm
+2 efw
+1 aqb
+1 zmu
+1 bmw
+1 guz
+2 knh
+1 zzn
+2 kzz
+1 dvb
+1 qba
+2 bbv
+1 igm

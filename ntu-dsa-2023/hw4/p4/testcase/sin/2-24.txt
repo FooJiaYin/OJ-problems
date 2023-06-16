@@ -1,0 +1,41 @@
+10 30
+cfx
+xcf
+bsk
+xcf
+kbs
+skb
+kbs
+cfx
+kqh
+vor
+2 skb
+1 ipk
+2 vor
+1 hjs
+1 xcf
+2 cfx
+2 ipk
+1 gnx
+2 bsk
+1 rww
+2 hjs
+2 xcf
+1 zmy
+1 sxf
+1 yzm
+2 cfx
+2 sxf
+2 yzm
+1 hfl
+2 xcf
+2 kqh
+2 hfl
+1 xcf
+2 kbs
+2 kbs
+2 rww
+2 zmy
+2 gnx
+2 xcf
+2 xcf

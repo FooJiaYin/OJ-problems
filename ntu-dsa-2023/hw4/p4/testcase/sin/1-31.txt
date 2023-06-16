@@ -1,0 +1,6 @@
+3 2
+cpa
+pac
+acp
+2 acp
+2 pac

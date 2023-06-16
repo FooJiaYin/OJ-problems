@@ -1,0 +1,41 @@
+10 30
+gcm
+iqa
+maf
+qai
+yjx
+zac
+ljj
+dbp
+kzp
+hqt
+1 zez
+2 zac
+1 xyj
+2 qai
+1 qth
+2 gcm
+2 dbp
+2 maf
+2 qth
+2 xyj
+2 iqa
+2 ljj
+2 kzp
+2 yjx
+1 nsm
+2 nsm
+1 thq
+1 thq
+1 thq
+2 thq
+2 hqt
+2 thq
+2 zez
+2 thq
+1 ypw
+2 ypw
+1 brt
+1 blq
+2 brt
+1 blq

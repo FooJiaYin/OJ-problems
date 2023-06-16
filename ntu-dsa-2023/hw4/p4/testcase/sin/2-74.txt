@@ -1,0 +1,41 @@
+10 30
+cfx
+qbm
+qbm
+qbm
+qbm
+fxc
+fxc
+fxc
+cfx
+hpl
+2 qbm
+1 plh
+1 nhq
+1 osc
+1 jec
+1 lhp
+1 tzh
+1 hpl
+1 pgq
+1 siu
+1 hqn
+1 lhp
+1 aoj
+1 tyw
+2 hqn
+1 xyk
+1 stm
+1 zyb
+1 qdu
+1 jyf
+1 jao
+1 uwn
+1 ecj
+2 jec
+2 qdu
+2 stm
+1 bzy
+1 nuw
+1 cfx
+2 siu

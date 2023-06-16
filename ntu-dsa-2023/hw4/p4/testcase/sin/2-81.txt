@@ -1,0 +1,41 @@
+10 30
+azi
+azi
+iaz
+iaz
+iaz
+azi
+zia
+azi
+azi
+zia
+2 azi
+2 iaz
+2 iaz
+2 iaz
+2 azi
+2 azi
+1 gjr
+2 zia
+2 zia
+2 azi
+2 azi
+2 gjr
+1 pwd
+1 dpw
+2 dpw
+2 pwd
+1 qpl
+1 lqp
+2 lqp
+1 lqp
+2 lqp
+2 qpl
+1 teg
+2 teg
+1 lvn
+2 lvn
+1 kgs
+2 kgs
+1 wfw
+2 wfw

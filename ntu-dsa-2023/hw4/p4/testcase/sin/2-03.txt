@@ -1,0 +1,41 @@
+10 30
+njp
+njp
+jis
+nig
+jis
+vbg
+ign
+jis
+ign
+jis
+2 vbg
+2 njp
+1 zxl
+1 gni
+2 gni
+1 jge
+1 ejg
+1 ejg
+1 lzx
+1 efo
+2 jis
+2 ejg
+1 foe
+2 nig
+1 lzx
+1 lac
+2 lzx
+2 efo
+2 ign
+1 exr
+2 ejg
+2 exr
+2 foe
+1 njp
+2 lzx
+1 cla
+2 jis
+2 njp
+1 xlz
+2 njp

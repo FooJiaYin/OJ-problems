@@ -1,0 +1,41 @@
+10 30
+wog
+wog
+wog
+ogw
+yyc
+uwy
+ycy
+gis
+sgi
+uwy
+1 cyy
+2 gis
+2 sgi
+2 yyc
+2 wog
+2 wog
+2 ycy
+2 cyy
+2 wog
+1 ogw
+2 ogw
+2 uwy
+2 uwy
+2 ogw
+1 nwz
+2 nwz
+1 cdn
+2 cdn
+1 ptr
+1 rpt
+2 rpt
+2 ptr
+1 zgp
+2 zgp
+1 run
+2 run
+1 jsi
+2 jsi
+1 zed
+2 zed

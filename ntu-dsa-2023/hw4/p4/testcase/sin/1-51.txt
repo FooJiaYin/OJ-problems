@@ -1,0 +1,7 @@
+2 4
+ab
+ba
+2 ba
+2 ab
+1 cd
+2 cd

@@ -1,0 +1,41 @@
+10 30
+rvp
+iet
+rvp
+tie
+dyv
+vdy
+zqr
+knu
+msh
+zqr
+2 dyv
+2 msh
+2 iet
+1 wpc
+1 cwp
+2 vdy
+2 rvp
+2 knu
+2 rvp
+1 pcw
+2 tie
+1 vwd
+2 pcw
+2 wpc
+2 vwd
+1 rzq
+1 ehe
+2 cwp
+2 ehe
+2 zqr
+1 gms
+2 rzq
+2 zqr
+1 msg
+1 fdl
+2 msg
+2 fdl
+2 gms
+1 khm
+1 hmk

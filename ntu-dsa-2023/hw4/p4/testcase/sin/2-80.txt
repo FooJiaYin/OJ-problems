@@ -1,0 +1,41 @@
+10 30
+lgu
+buk
+kbu
+dko
+buk
+ukb
+rve
+ulg
+odk
+ver
+2 buk
+2 kbu
+2 ulg
+2 odk
+2 ukb
+2 lgu
+2 buk
+2 dko
+1 rve
+2 ver
+1 ver
+2 ver
+2 rve
+2 rve
+1 pnw
+2 pnw
+1 yeh
+2 yeh
+1 wjy
+2 wjy
+1 xpl
+2 xpl
+1 gnq
+2 gnq
+1 wor
+1 iik
+2 iik
+2 wor
+1 sre
+2 sre

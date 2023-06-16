@@ -1,0 +1,41 @@
+10 30
+rfg
+grf
+fgr
+grf
+grf
+jfh
+rfg
+jfh
+zqc
+rfg
+2 rfg
+2 zqc
+2 grf
+2 jfh
+2 jfh
+2 fgr
+2 grf
+1 zey
+2 grf
+2 rfg
+2 zey
+2 rfg
+1 fcv
+2 fcv
+1 mzm
+2 mzm
+1 lmn
+2 lmn
+1 fsf
+2 fsf
+1 nvo
+2 nvo
+1 djl
+1 ldj
+2 djl
+2 ldj
+1 muv
+2 muv
+1 rxm
+2 rxm

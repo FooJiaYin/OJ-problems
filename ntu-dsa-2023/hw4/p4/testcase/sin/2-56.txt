@@ -1,0 +1,41 @@
+10 30
+tkl
+klt
+msd
+tkl
+tkl
+lmd
+msd
+fek
+kfe
+asg
+1 kfe
+1 fek
+1 sga
+2 msd
+1 sga
+2 tkl
+1 gas
+1 pvs
+1 zga
+2 asg
+1 ekf
+2 tkl
+2 pvs
+1 ekf
+2 kfe
+1 fek
+1 dde
+1 gas
+1 edd
+1 lpz
+1 gaz
+2 lmd
+1 asg
+1 asg
+1 gas
+2 gaz
+1 brv
+1 yyn
+1 azg
+2 fek

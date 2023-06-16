@@ -1,0 +1,41 @@
+10 30
+fbx
+bxf
+saz
+bxf
+jbr
+bfe
+jbr
+bfe
+duq
+duq
+1 xfb
+2 fbx
+2 bxf
+2 saz
+1 xfb
+1 doj
+1 fbx
+1 bcc
+2 bcc
+2 xfb
+1 ska
+2 doj
+2 fbx
+2 jbr
+2 xfb
+2 duq
+2 jbr
+2 duq
+2 bfe
+2 bfe
+2 bxf
+1 kas
+1 tnm
+1 kas
+2 tnm
+2 kas
+2 ska
+2 kas
+1 uxk
+1 uxk

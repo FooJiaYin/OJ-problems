@@ -1,0 +1,41 @@
+10 30
+rnm
+nrd
+xve
+vun
+tef
+dnr
+atm
+yiw
+xgo
+yiw
+2 nrd
+2 atm
+2 yiw
+1 yiw
+2 vun
+1 wyi
+1 xve
+1 oao
+2 xgo
+2 tef
+1 yzh
+1 yzh
+2 oao
+1 rdn
+1 vhy
+1 zbg
+1 xve
+2 zbg
+1 sgy
+2 dnr
+2 sgy
+2 vhy
+2 yzh
+2 rdn
+2 wyi
+1 gmn
+1 hyz
+1 oxj
+2 gmn
+1 wbr

@@ -1,0 +1,41 @@
+10 30
+yey
+hex
+mmx
+mmx
+hex
+xmm
+xmm
+xmm
+xmm
+yey
+2 hex
+2 xmm
+2 mmx
+2 yey
+2 hex
+2 yey
+2 xmm
+2 mmx
+1 xmm
+2 xmm
+2 xmm
+2 xmm
+1 mzd
+2 mzd
+1 soa
+2 soa
+1 nrw
+2 nrw
+1 bsf
+2 bsf
+1 uaz
+1 rvw
+1 ypi
+2 uaz
+2 rvw
+2 ypi
+1 wuq
+2 wuq
+1 dnm
+1 nmd

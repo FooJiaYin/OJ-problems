@@ -1,0 +1,41 @@
+10 30
+pbw
+bwp
+rte
+eub
+fow
+bwp
+wfo
+ieh
+xuq
+tmj
+1 pbw
+2 xuq
+2 bwp
+1 wfo
+1 pbw
+1 php
+2 eub
+2 pbw
+1 rte
+2 wfo
+1 pic
+1 hie
+2 hie
+2 php
+2 ieh
+1 owf
+1 fow
+1 ter
+1 agy
+2 ter
+2 bwp
+1 pbw
+1 jtm
+2 wfo
+1 fow
+2 owf
+2 tmj
+1 agy
+1 hsg
+2 pic

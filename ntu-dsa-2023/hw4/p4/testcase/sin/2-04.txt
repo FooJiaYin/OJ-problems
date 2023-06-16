@@ -1,0 +1,41 @@
+10 30
+cyl
+cyl
+ywj
+arr
+rar
+ylc
+arr
+arr
+oaf
+qaf
+1 nps
+1 snp
+2 ywj
+1 foa
+2 nps
+1 rgr
+1 psn
+1 mrr
+2 cyl
+1 kis
+2 foa
+1 arr
+2 rar
+2 arr
+2 arr
+1 qat
+1 osf
+1 ypl
+2 arr
+2 cyl
+1 rrm
+1 fos
+2 psn
+1 lef
+2 rgr
+1 xei
+1 lcy
+1 yhh
+2 mrr
+1 oed

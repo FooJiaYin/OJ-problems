@@ -1,0 +1,41 @@
+10 30
+eub
+sha
+beu
+pnp
+amt
+beu
+bgr
+pnp
+hnw
+ube
+2 bgr
+2 beu
+1 eub
+2 beu
+2 pnp
+1 xku
+2 pnp
+2 xku
+1 beu
+2 ube
+2 beu
+2 sha
+2 hnw
+2 eub
+2 eub
+1 tam
+1 uoe
+2 amt
+1 mta
+2 uoe
+1 amt
+1 mta
+2 amt
+2 mta
+2 tam
+2 mta
+1 pge
+2 pge
+1 vsm
+2 vsm

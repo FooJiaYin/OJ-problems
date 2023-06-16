@@ -1,0 +1,41 @@
+10 30
+cth
+cth
+pvg
+cth
+thc
+hct
+ovc
+thc
+cth
+thc
+2 cth
+2 pvg
+1 lzu
+2 hct
+2 thc
+2 lzu
+1 ovc
+1 cai
+1 aic
+2 aic
+1 xnk
+2 thc
+2 cth
+1 aoh
+2 ovc
+1 jsa
+2 jsa
+1 cai
+2 thc
+1 cov
+1 xiy
+2 cov
+2 aoh
+2 xiy
+1 thc
+1 cai
+1 hct
+1 zod
+2 zod
+1 crh

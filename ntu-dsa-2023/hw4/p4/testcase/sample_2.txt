@@ -1,0 +1,11 @@
+3 7
+bananana
+nananaba
+cucumber
+1 nanabana
+1 nabanana
+1 anananab
+2 cucumber
+1 cumbercu
+1 bercucum
+2 nanabana

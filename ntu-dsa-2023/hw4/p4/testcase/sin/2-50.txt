@@ -1,0 +1,41 @@
+10 30
+jki
+gmx
+nad
+vtp
+lsw
+qpm
+swl
+kij
+qpm
+nyk
+1 wls
+2 wls
+2 nad
+2 vtp
+2 lsw
+2 nyk
+1 xgm
+1 wls
+1 jki
+2 gmx
+1 pmq
+2 pmq
+1 bqx
+1 wls
+1 lsw
+2 jki
+1 ijk
+2 xgm
+1 osf
+1 jch
+2 jch
+1 xbq
+2 bqx
+2 jki
+2 swl
+1 swl
+1 swl
+2 kij
+2 wls
+1 lsw

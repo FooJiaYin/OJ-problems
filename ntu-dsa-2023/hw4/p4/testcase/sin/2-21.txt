@@ -1,0 +1,41 @@
+10 30
+ylc
+cyl
+ylc
+lcy
+ylc
+cyl
+lcy
+cyl
+xvu
+bxv
+2 ylc
+2 lcy
+2 bxv
+1 xtr
+2 lcy
+2 xvu
+2 cyl
+2 xtr
+1 lcy
+2 cyl
+1 mms
+1 lcy
+1 cyl
+1 msm
+2 mms
+2 msm
+2 lcy
+2 lcy
+2 ylc
+1 ylc
+1 ylc
+1 rsv
+2 ylc
+1 lcy
+1 ylc
+1 vbj
+2 cyl
+2 lcy
+2 cyl
+2 ylc

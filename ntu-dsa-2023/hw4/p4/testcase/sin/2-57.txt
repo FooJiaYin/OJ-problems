@@ -1,0 +1,41 @@
+10 30
+mcy
+gbv
+ean
+fpi
+gbv
+vgb
+rki
+plv
+fpi
+rzt
+1 cdr
+1 san
+1 ztr
+2 plv
+1 bvg
+1 emn
+1 ymc
+1 drc
+1 vvw
+1 wqw
+1 ykk
+2 drc
+1 irk
+1 qjv
+1 pzg
+1 vgb
+2 pzg
+1 avp
+1 jhv
+2 irk
+2 ean
+1 vwq
+1 kir
+1 cym
+2 qjv
+1 rqn
+1 jov
+1 mjk
+2 jhv
+1 ymc

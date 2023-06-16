@@ -1,0 +1,41 @@
+10 30
+tsz
+dbr
+brd
+zts
+szt
+waz
+szt
+szt
+dbr
+szt
+2 dbr
+2 dbr
+2 zts
+2 brd
+2 waz
+1 szt
+2 szt
+2 tsz
+2 szt
+2 szt
+2 szt
+2 szt
+1 kle
+2 kle
+1 mgo
+2 mgo
+1 poi
+1 ipo
+1 oip
+2 ipo
+1 oip
+1 jrx
+2 oip
+1 jrx
+2 jrx
+1 xjr
+1 bec
+2 xjr
+2 jrx
+2 oip

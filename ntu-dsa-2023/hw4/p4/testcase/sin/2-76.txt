@@ -1,0 +1,41 @@
+10 30
+mgc
+gcm
+gcm
+ibn
+cve
+cve
+iwk
+mgc
+gcm
+gcm
+2 gcm
+2 ibn
+2 gcm
+2 gcm
+2 iwk
+2 mgc
+2 cve
+1 gcm
+1 ruk
+2 ruk
+1 gcm
+2 gcm
+2 gcm
+2 cve
+2 gcm
+2 mgc
+1 pbe
+2 pbe
+1 twe
+2 twe
+1 hly
+1 lyh
+2 lyh
+2 hly
+1 aqy
+2 aqy
+1 wiw
+2 wiw
+1 tso
+2 tso

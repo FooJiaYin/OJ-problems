@@ -1,0 +1,41 @@
+10 30
+cvi
+phv
+pic
+icp
+ezk
+vic
+vph
+zke
+xwe
+rqb
+1 brq
+2 zke
+1 dhe
+1 icp
+1 phv
+2 icp
+2 vph
+1 xwe
+2 icp
+2 xwe
+2 pic
+2 rqb
+2 vic
+2 ezk
+2 phv
+2 brq
+1 hvp
+2 hvp
+2 dhe
+2 cvi
+2 xwe
+2 phv
+1 qna
+2 qna
+1 ydl
+2 ydl
+1 com
+1 mox
+2 mox
+2 com

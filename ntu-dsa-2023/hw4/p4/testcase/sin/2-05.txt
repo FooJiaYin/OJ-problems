@@ -1,0 +1,41 @@
+10 30
+icf
+lrx
+xlr
+rxl
+rxl
+xlr
+cfi
+rxl
+icf
+lxy
+1 uix
+1 rnq
+1 xui
+2 rnq
+1 iap
+2 icf
+2 xui
+1 iap
+2 xlr
+1 ylx
+1 rwp
+2 cfi
+2 ylx
+2 rwp
+1 rxl
+1 uix
+1 cfi
+1 icf
+1 ixt
+2 rxl
+2 lrx
+1 xti
+2 xlr
+2 icf
+1 fic
+2 lxy
+2 icf
+2 rxl
+1 wkc
+2 rxl

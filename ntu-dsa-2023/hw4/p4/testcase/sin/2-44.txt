@@ -1,0 +1,41 @@
+10 30
+abn
+abn
+lnv
+nab
+lnv
+fgp
+qed
+bna
+bna
+frq
+2 abn
+2 abn
+1 gpf
+2 frq
+2 bna
+2 gpf
+1 pby
+2 pby
+2 lnv
+1 bna
+2 nab
+2 bna
+2 bna
+2 qed
+1 cxo
+2 fgp
+2 cxo
+2 lnv
+1 nsn
+1 kgx
+2 kgx
+1 snn
+1 qiz
+2 nsn
+2 snn
+2 qiz
+1 pbp
+2 pbp
+1 say
+1 ghu

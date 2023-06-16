@@ -1,0 +1,41 @@
+10 30
+ibo
+boi
+azp
+azp
+paz
+boi
+ibo
+oib
+boi
+oib
+2 azp
+2 paz
+2 ibo
+2 oib
+2 ibo
+2 azp
+1 boi
+2 oib
+1 ibo
+2 boi
+2 ibo
+2 boi
+2 boi
+1 yyr
+2 boi
+2 yyr
+1 boa
+2 boa
+1 jyo
+2 jyo
+1 fus
+2 fus
+1 ihx
+2 ihx
+1 kkb
+2 kkb
+1 hlp
+2 hlp
+1 oma
+2 oma
